@@ -17,3 +17,5 @@ code/app/utils/__pycache__/build_RDF_triples.cpython-38.pyc
 code/app/utils/__pycache__/preprocess_sentences.cpython-38.pyc
 code/app/utils/__pycache__/process_triples.cpython-38.pyc
 code/app/utils/__pycache__/triples_extraction.cpython-38.pyc
+spotlight/en.tar.gz.md5
+spotlight/dbpedia-spotlight-services-1.0.0.jar

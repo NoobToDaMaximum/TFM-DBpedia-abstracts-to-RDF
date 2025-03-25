@@ -25,14 +25,14 @@ def get_annotated_text_dict(text, service_url=SPOTLIGHT_ONLINE_API, confidence=0
     term_URI_dict = {}
     term_types_dict = {}
     try:
-        resp = requests.get(service_url, params=parameters, headers=headerinfo)
+        resp = requests.get(service_url, params=parameters, headers=headerinfo, verify=False)
     except:
         if service_url == SPOTLIGHT_ONLINE_API:
             print("Error at dbpedia spotlight api")
             return None
         try:
             print("Error at local dbpedia spotlight, trying with the api one")
-            resp = requests.get(SPOTLIGHT_ONLINE_API, params=parameters, headers=headerinfo)
+            resp = requests.get(SPOTLIGHT_ONLINE_API, params=parameters, headers=headerinfo, verify=False)
         except:
             print("Error at dbpedia spotlight api")
             return None

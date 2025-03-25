@@ -113,6 +113,18 @@ docker run -p 8501:8501 pablohdez98/dbpedia-abstracts-to-rdf:latest  # To run th
 ```
 After that, open [localhost:8501][12] and you will see the web application.
 
+### ⚠️ Note on DBpedia Spotlight Online API
+The SSL certificate for the DBpedia Spotlight online API is currently expired.
+The current Docker image does not include a fix for this.
+To work around it, you must manually edit the function get_annotated_text_dict(...) in code/utils/build_RDF_triples.py, and add the following parameter to the requests.get(...) call:
+```
+verify=False
+```
+✅ Example fix:
+```
+resp = requests.get(service_url, params=parameters, headers=headerinfo, verify=False)
+```
+This disables SSL verification. Alternatively, we recommend running a local Spotlight instance via Docker, which avoids the SSL problem entirely.
 ## Future work (what is left to do after GSoC)
 The main problem of the pipeline right now is that of all the triples it can generate, only half of them are free of errors in their structure. This kind of errors occur when the pipeline is unable to find a valid lexicalization for the predicate (verb+preposition) or for the object, leaving these elements as Literals instead of as resources or properties.
 When we mention lexicalization we refer to the translation of text to URIs using tables for [properties][4] and [DBpedia classes][5].

@@ -24,7 +24,7 @@ PROP_LEXICALIZATION_TABLE = "datasets/verb_prep_property_lookup.json"
 CLA_LEXICALIZATION_TABLE = "datasets/classes_lookup.json"
 OUTPUT_FOLDER = "code/app/output/"
 SPOTLIGHT_ONLINE_API = "https://api.dbpedia-spotlight.org/en/annotate"
-SPOTLIGHT_LOCAL_URL = "http://localhost:2222/rest/annotate/"
+SPOTLIGHT_LOCAL_URL = "http://localhost:2222/rest/annotate"
 
 
 def pipeline(nlp, raw_text, dbo_graph ,prop_lex_table, cla_lex_table):
@@ -64,7 +64,7 @@ def pipeline(nlp, raw_text, dbo_graph ,prop_lex_table, cla_lex_table):
     triples = pt.split_amod_conjunctions_obj(nlp, triples)
 
     try:
-        term_URI_dict, term_types_dict = brt.get_annotated_text_dict(raw_text, service_url=SPOTLIGHT_LOCAL_URL)
+        term_URI_dict, term_types_dict = brt.get_annotated_text_dict(raw_text, service_url=SPOTLIGHT_ONLINE_API)
     except:
         return [], [], n_sent_spacy, n_sent_simples
     rdf_triples = brt.replace_text_URI(triples, term_URI_dict, term_types_dict, prop_lex_table, cla_lex_table, dbo_graph)

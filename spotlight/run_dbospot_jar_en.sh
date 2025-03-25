@@ -1,1 +1,1 @@
-java -jar dbpedia-spotlight-1.0.0.jar en http://localhost:2222/rest
+java -jar dbpedia-spotlight-services-1.0.0.jar en http://localhost:2222/rest
