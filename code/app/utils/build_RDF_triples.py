@@ -6,6 +6,7 @@ from utils.log_generator import triple_with_no_uri_log, triple_with_no_uri_log_s
 import string
 
 SPOTLIGHT_ONLINE_API = "https://api.dbpedia-spotlight.org/en/annotate"
+SPOTLIGHT_LOCAL_URL = "http://localhost:2222/rest/annotate/"
 UNKOWN_VALUE = "UNK"
 DEFAULT_VERB = "DEF"
 
@@ -14,7 +15,7 @@ DEFAULT_VERB = "DEF"
 ###############
 
 
-def get_annotated_text_dict(text, service_url=SPOTLIGHT_ONLINE_API, confidence=0.3, support=0, dbpedia_only=True):
+def get_annotated_text_dict(text, service_url, confidence=0.3, support=0, dbpedia_only=True):
     """
     Function that query's the dbpedia spotlight api with the document text as input. Confidence level is the
     confidence score for disambiguation / linking and support is how prominent is this entity in Lucene Model, i.e. number of inlinks in Wikipedia.
@@ -25,17 +26,17 @@ def get_annotated_text_dict(text, service_url=SPOTLIGHT_ONLINE_API, confidence=0
     term_URI_dict = {}
     term_types_dict = {}
     try:
+        print("Trying with online dbpedia spotlight")
         resp = requests.get(service_url, params=parameters, headers=headerinfo)
     except:
         if service_url == SPOTLIGHT_ONLINE_API:
-            print("Error at dbpedia spotlight api")
-            return None
-        try:
-            print("Error at local dbpedia spotlight, trying with the api one")
-            resp = requests.get(SPOTLIGHT_ONLINE_API, params=parameters, headers=headerinfo)
-        except:
-            print("Error at dbpedia spotlight api")
-            return None
+            print("Error at Online dbpedia spotlight api")
+            try:
+                print("Error at local dbpedia spotlight, trying with local api")
+                resp = requests.get(SPOTLIGHT_LOCAL_URL, params=parameters, headers=headerinfo)
+            except:
+                print("Error at with dbpedia spotlight apis. Please check if the service is running")
+                return None
 
     if resp.status_code != 200:
         print(f"error, status code: {resp.status_code}")
