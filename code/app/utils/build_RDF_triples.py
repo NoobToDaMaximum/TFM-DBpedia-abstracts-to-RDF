@@ -30,12 +30,11 @@ def get_annotated_text_dict(text, service_url, confidence=0.3, support=0, dbpedi
         resp = requests.get(service_url, params=parameters, headers=headerinfo)
     except:
         if service_url == SPOTLIGHT_ONLINE_API:
-            print("Error at Online dbpedia spotlight api")
+            print("Error at Online dbpedia spotlight api, trying with local dbpedia spotlight")
             try:
-                print("Error at local dbpedia spotlight, trying with local api")
                 resp = requests.get(SPOTLIGHT_LOCAL_URL, params=parameters, headers=headerinfo)
             except:
-                print("Error at with dbpedia spotlight apis. Please check if the service is running")
+                print("Error at with dbpedia spotlight apis'. Please check if the service is running")
                 return None
 
     if resp.status_code != 200:
