@@ -126,8 +126,8 @@ if __name__ == "__main__":
     print('This app translates any kind of text into RDF!')
 
     # Read pandas
-    from_index = 5000
-    to_index = 10000
+    from_index = 0
+    to_index = 10001
     df = pd.read_csv('datasets/long-abstracts-sample.csv')
     df = df.to_dict(orient='records')
     try:
