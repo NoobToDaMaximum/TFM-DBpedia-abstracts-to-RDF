@@ -110,6 +110,8 @@ def get_simple_triples(nlp, sentence):
     dep_matcher.add("patt_be_acomp", [patt_be_acomp])
     dep_matcher.add("patt_agent_obj", [patt_agent_obj])
     dep_matcher.add("patt_verb_conj", [patt_verb_conj])
+
+    #### THIS IS THE REAL CODE ####
     dep_matches = dep_matcher(doc)
 
     objs = []
