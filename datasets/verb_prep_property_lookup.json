@@ -1080,8 +1080,8 @@
     "DEF": "http://dbpedia.org/ontology/opponent"
   },
   "catalogue": {
-    "in": "http://dbpedia.org/ontology/catalog",
-    "DEF": "http://dbpedia.org/ontology/catalog"
+    "in": "UNK",
+    "DEF": "UNK"
   },
   "coach": {
     "at": "http://dbpedia.org/ontology/coachClub",
@@ -1089,9 +1089,3770 @@
   },
   "continue": {
     "with": "http://dbpedia.org/ontology/related",
-    "DEF": "http://dbpedia.org/ontology/continuation"
+    "DEF": "UNK"
   },
   "set": {
-    "DEF": "http://dbpedia.org/ontology/setting"
+    "DEF": "UNK"
+  },
+  "abandon": {
+    "on": "UNK"
+  },
+  "abolish": {
+    "DEF": "UNK",
+    "after": "UNK"
+  },
+  "absorb": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "into": "UNK"
+  },
+  "accept": {
+    "DEF": "UNK",
+    "due": "UNK"
+  },
+  "access": {
+    "on": "UNK"
+  },
+  "acclaim": {
+    "for": "UNK"
+  },
+  "accompany": {
+    "DEF": "UNK"
+  },
+  "account": {
+    "for": "UNK"
+  },
+  "accredit": {
+    "DEF": "UNK",
+    "through": "UNK"
+  },
+  "accrue": {
+    "DEF": "UNK"
+  },
+  "accumulate": {
+    "between": "UNK",
+    "over": "UNK"
+  },
+  "achieve": {
+    "DEF": "UNK",
+    "over": "UNK"
+  },
+  "acknowledge": {
+    "DEF": "UNK"
+  },
+  "acquire": {
+    "DEF": "UNK",
+    "among": "UNK",
+    "in": "UNK"
+  },
+  "act": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "adapt": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "from": "UNK",
+    "into": "UNK"
+  },
+  "add": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "added": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "together": "UNK"
+  },
+  "address": {
+    "DEF": "http://dbpedia.org/ontology/address"
+  },
+  "adhere": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "administer": {
+    "DEF": "UNK"
+  },
+  "administrate": {
+    "DEF": "UNK"
+  },
+  "admit": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "adopt": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "between": "UNK",
+    "on": "UNK",
+    "via": "UNK"
+  },
+  "advertise": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "advise": {
+    "DEF": "UNK"
+  },
+  "advocate": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "affect": {
+    "DEF": "UNK"
+  },
+  "agree": {
+    "DEF": "UNK"
+  },
+  "aim": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "align": {
+    "DEF": "UNK"
+  },
+  "allege": {
+    "DEF": "UNK"
+  },
+  "allow": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "alter": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "amount": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "analyze": {
+    "DEF": "UNK"
+  },
+  "anchor": {
+    "DEF": "UNK"
+  },
+  "annex": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "announce": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "annul": {
+    "DEF": "UNK"
+  },
+  "antagonize": {
+    "DEF": "UNK"
+  },
+  "anticipate": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "append": {
+    "DEF": "UNK"
+  },
+  "apply": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "to": "UNK"
+  },
+  "appoint": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "into": "UNK",
+    "to": "UNK"
+  },
+  "appointed": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "by": "UNK"
+  },
+  "apprentice": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "approach": {
+    "DEF": "http://dbpedia.org/ontology/approach"
+  },
+  "approve": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "of": "UNK"
+  },
+  "argue": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "arise": {
+    "DEF": "UNK"
+  },
+  "arrange": {
+    "DEF": "UNK"
+  },
+  "arrest": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "under": "UNK",
+    "with": "UNK"
+  },
+  "arrive": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "at": "UNK",
+    "during": "UNK",
+    "from": "UNK",
+    "in": "UNK"
+  },
+  "ascend": {
+    "DEF": "UNK"
+  },
+  "assault": {
+    "DEF": "UNK"
+  },
+  "assert": {
+    "DEF": "UNK"
+  },
+  "assign": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "assist": {
+    "DEF": "UNK"
+  },
+  "associate": {
+    "DEF": "http://dbpedia.org/ontology/associate",
+    "with": "UNK"
+  },
+  "assume": {
+    "DEF": "UNK"
+  },
+  "attach": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "attack": {
+    "DEF": "UNK"
+  },
+  "attain": {
+    "DEF": "UNK"
+  },
+  "attempt": {
+    "DEF": "UNK"
+  },
+  "attended": {
+    "DEF": "UNK",
+    "due": "UNK"
+  },
+  "attest": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "attract": {
+    "DEF": "UNK"
+  },
+  "attribute": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "author": {
+    "DEF": "http://dbpedia.org/ontology/author",
+    "over": "UNK"
+  },
+  "authorize": {
+    "DEF": "UNK",
+    "between": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "average": {
+    "DEF": "http://dbpedia.org/ontology/average"
+  },
+  "avoid": {
+    "DEF": "UNK"
+  },
+  "back": {
+    "DEF": "UNK"
+  },
+  "ban": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "baptize": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "bat": {
+    "DEF": "UNK"
+  },
+  "beat": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "behave": {
+    "DEF": "UNK"
+  },
+  "believe": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "bestow": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "bind": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "bisect": {
+    "DEF": "UNK"
+  },
+  "blend": {
+    "DEF": "UNK"
+  },
+  "block": {
+    "DEF": "http://dbpedia.org/ontology/block"
+  },
+  "bookende": {
+    "DEF": "UNK"
+  },
+  "boot": {
+    "DEF": "UNK"
+  },
+  "borrow": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "bound": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "bowl": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "break": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "into": "UNK",
+    "through": "UNK"
+  },
+  "breed": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "in": "UNK"
+  },
+  "brew": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "with": "UNK"
+  },
+  "bring": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "under": "UNK",
+    "with": "UNK"
+  },
+  "burn": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "buy": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "campaign": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "cancel": {
+    "DEF": "UNK",
+    "after": "UNK",
+    "due": "UNK"
+  },
+  "cap": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "captain": {
+    "DEF": "UNK"
+  },
+  "capture": {
+    "DEF": "UNK",
+    "on": "UNK",
+    "to": "UNK"
+  },
+  "carry": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "carve": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "in": "UNK"
+  },
+  "cast": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "in": "UNK"
+  },
+  "catch": {
+    "DEF": "UNK",
+    "before": "UNK"
+  },
+  "cater": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "to": "UNK"
+  },
+  "cause": {
+    "DEF": "UNK"
+  },
+  "cease": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "with": "UNK"
+  },
+  "cede": {
+    "DEF": "UNK"
+  },
+  "celebrate": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "center": {
+    "around": "UNK",
+    "on": "UNK"
+  },
+  "centralize": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "centre": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "certify": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "chair": {
+    "DEF": "UNK"
+  },
+  "challenge": {
+    "DEF": "UNK"
+  },
+  "champion": {
+    "DEF": "http://dbpedia.org/ontology/champion"
+  },
+  "change": {
+    "DEF": "UNK",
+    "into": "UNK",
+    "to": "UNK"
+  },
+  "channelize": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "chant": {
+    "DEF": "UNK"
+  },
+  "characterize": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK"
+  },
+  "charge": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "chart": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "in": "UNK"
+  },
+  "charter": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK"
+  },
+  "check": {
+    "DEF": "UNK"
+  },
+  "choose": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "in": "UNK"
+  },
+  "circle": {
+    "DEF": "http://dbpedia.org/ontology/circle"
+  },
+  "circulate": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "cite": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "claim": {
+    "DEF": "UNK"
+  },
+  "classify": {
+    "DEF": "UNK",
+    "among": "UNK",
+    "as": "UNK",
+    "into": "UNK"
+  },
+  "clear": {
+    "DEF": "UNK"
+  },
+  "cleave": {
+    "DEF": "UNK"
+  },
+  "climb": {
+    "DEF": "UNK"
+  },
+  "clinch": {
+    "DEF": "UNK"
+  },
+  "co": {
+    "DEF": "UNK"
+  },
+  "coat": {
+    "DEF": "UNK"
+  },
+  "code": {
+    "DEF": "http://dbpedia.org/ontology/code"
+  },
+  "coin": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "coincide": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "collaborate": {
+    "on": "UNK",
+    "with": "UNK"
+  },
+  "collect": {
+    "DEF": "UNK",
+    "around": "UNK",
+    "from": "UNK"
+  },
+  "college": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "combine": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "commemorate": {
+    "DEF": "UNK"
+  },
+  "commence": {
+    "DEF": "UNK",
+    "during": "UNK",
+    "on": "UNK",
+    "with": "UNK"
+  },
+  "commend": {
+    "DEF": "UNK"
+  },
+  "commit": {
+    "DEF": "UNK"
+  },
+  "compare": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "compile": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "complicate": {
+    "DEF": "UNK"
+  },
+  "comply": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "compress": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "comprise": {
+    "DEF": "UNK"
+  },
+  "conceive": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "concentrate": {
+    "DEF": "UNK"
+  },
+  "concern": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "conclude": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "with": "UNK"
+  },
+  "condition": {
+    "DEF": "UNK"
+  },
+  "conduct": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "under": "UNK"
+  },
+  "confer": {
+    "DEF": "UNK"
+  },
+  "confirm": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "from": "UNK",
+    "on": "UNK"
+  },
+  "confiscate": {
+    "DEF": "UNK",
+    "under": "UNK"
+  },
+  "confuse": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "connect": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "consecrate": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "on": "UNK"
+  },
+  "consider": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "due": "UNK",
+    "for": "UNK"
+  },
+  "consist": {
+    "DEF": "UNK",
+    "of": "UNK"
+  },
+  "constitute": {
+    "DEF": "UNK"
+  },
+  "consume": {
+    "DEF": "UNK",
+    "between": "UNK"
+  },
+  "contact": {
+    "DEF": "UNK"
+  },
+  "contest": {
+    "DEF": "http://dbpedia.org/ontology/contest",
+    "at": "UNK",
+    "for": "UNK",
+    "over": "UNK",
+    "to": "UNK"
+  },
+  "contribute": {
+    "DEF": "UNK",
+    "to": "UNK",
+    "with": "UNK"
+  },
+  "control": {
+    "DEF": "UNK",
+    "about": "UNK"
+  },
+  "convene": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "of": "UNK"
+  },
+  "converge": {
+    "DEF": "UNK"
+  },
+  "convert": {
+    "DEF": "UNK",
+    "into": "UNK",
+    "to": "UNK"
+  },
+  "convict": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "cook": {
+    "DEF": "UNK",
+    "on": "UNK",
+    "without": "UNK"
+  },
+  "copy": {
+    "DEF": "UNK"
+  },
+  "correspond": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "count": {
+    "DEF": "UNK"
+  },
+  "counterpart": {
+    "DEF": "UNK",
+    "within": "UNK"
+  },
+  "cover": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "from": "UNK",
+    "in": "UNK",
+    "with": "UNK"
+  },
+  "craft": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "crash": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "onto": "UNK"
+  },
+  "credit": {
+    "DEF": "http://dbpedia.org/ontology/credit",
+    "as": "UNK",
+    "with": "UNK"
+  },
+  "cremate": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "criticize": {
+    "DEF": "UNK"
+  },
+  "crown": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "at": "UNK",
+    "on": "UNK"
+  },
+  "crystallize": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "culminate": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "cultivate": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "curate": {
+    "DEF": "UNK"
+  },
+  "cut": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "to": "UNK"
+  },
+  "damage": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "dark": {
+    "DEF": "UNK"
+  },
+  "date": {
+    "DEF": "http://dbpedia.org/ontology/date",
+    "about": "UNK",
+    "at": "UNK",
+    "from": "UNK",
+    "through": "UNK",
+    "to": "UNK"
+  },
+  "deal": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "decide": {
+    "DEF": "UNK",
+    "over": "UNK",
+    "to": "UNK"
+  },
+  "declare": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "under": "UNK"
+  },
+  "decline": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "decorate": {
+    "DEF": "UNK"
+  },
+  "dedicate": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "deem": {
+    "DEF": "UNK"
+  },
+  "defeat": {
+    "DEF": "http://dbpedia.org/ontology/defeat",
+    "as": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "defect": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "defend": {
+    "DEF": "UNK"
+  },
+  "define": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "delay": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "delist": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "deliver": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "demolish": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "demonstrate": {
+    "DEF": "UNK"
+  },
+  "denote": {
+    "DEF": "UNK"
+  },
+  "deny": {
+    "DEF": "UNK"
+  },
+  "depart": {
+    "DEF": "UNK"
+  },
+  "depend": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "depict": {
+    "DEF": "UNK"
+  },
+  "deploy": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "on": "UNK",
+    "to": "UNK"
+  },
+  "depopulate": {
+    "DEF": "UNK",
+    "during": "UNK"
+  },
+  "deport": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "to": "UNK"
+  },
+  "depose": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "deposit": {
+    "DEF": "UNK"
+  },
+  "derail": {
+    "DEF": "UNK"
+  },
+  "derive": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "descend": {
+    "DEF": "UNK"
+  },
+  "designate": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "into": "UNK",
+    "on": "UNK"
+  },
+  "destroy": {
+    "DEF": "UNK"
+  },
+  "detach": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "detail": {
+    "DEF": "UNK"
+  },
+  "detain": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "detonate": {
+    "DEF": "UNK"
+  },
+  "deviate": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "devote": {
+    "DEF": "UNK"
+  },
+  "diagnose": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "dictate": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "differ": {
+    "DEF": "UNK",
+    "between": "UNK",
+    "from": "UNK",
+    "in": "UNK"
+  },
+  "diminish": {
+    "DEF": "UNK",
+    "into": "UNK"
+  },
+  "direct": {
+    "DEF": "UNK",
+    "on": "UNK",
+    "toward": "UNK",
+    "with": "UNK"
+  },
+  "disagree": {
+    "DEF": "UNK"
+  },
+  "disappear": {
+    "DEF": "UNK",
+    "towards": "UNK"
+  },
+  "disband": {
+    "DEF": "UNK",
+    "after": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "discharge": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "into": "UNK"
+  },
+  "discontinue": {
+    "DEF": "UNK",
+    "after": "UNK",
+    "along": "UNK",
+    "in": "UNK"
+  },
+  "discover": {
+    "DEF": "UNK",
+    "among": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "discuss": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "disenfranchise": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "disinter": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "dismantle": {
+    "DEF": "UNK"
+  },
+  "dismiss": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "disobey": {
+    "DEF": "UNK"
+  },
+  "dispense": {
+    "DEF": "UNK"
+  },
+  "display": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "dispute": {
+    "DEF": "UNK",
+    "after": "UNK"
+  },
+  "disqualify": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "dissolve": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "distinguish": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "disturb": {
+    "DEF": "UNK"
+  },
+  "diverge": {
+    "DEF": "UNK",
+    "above": "UNK"
+  },
+  "divert": {
+    "DEF": "UNK"
+  },
+  "divorced": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "do": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "document": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "dominate": {
+    "DEF": "UNK"
+  },
+  "don": {
+    "DEF": "UNK",
+    "after": "UNK"
+  },
+  "donate": {
+    "DEF": "UNK"
+  },
+  "downgrade": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "download": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "draft": {
+    "DEF": "http://dbpedia.org/ontology/draft",
+    "as": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "drain": {
+    "DEF": "UNK",
+    "into": "UNK"
+  },
+  "draw": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "into": "UNK"
+  },
+  "dress": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "like": "UNK"
+  },
+  "drive": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "drop": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "drown": {
+    "DEF": "UNK",
+    "during": "UNK"
+  },
+  "dub": {
+    "DEF": "UNK"
+  },
+  "dwell": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "earn": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "educate": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "effect": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "elevate": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "eliminate": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "embark": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "embed": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "emerge": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK"
+  },
+  "emigrate": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "emphasise": {
+    "DEF": "UNK"
+  },
+  "emphasize": {
+    "DEF": "UNK"
+  },
+  "empty": {
+    "DEF": "UNK",
+    "into": "UNK"
+  },
+  "emulate": {
+    "DEF": "UNK"
+  },
+  "enable": {
+    "DEF": "UNK"
+  },
+  "enact": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "on": "UNK"
+  },
+  "enchant": {
+    "DEF": "UNK"
+  },
+  "encode": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "encompass": {
+    "DEF": "UNK",
+    "during": "UNK",
+    "in": "UNK"
+  },
+  "encounter": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "encourage": {
+    "DEF": "UNK"
+  },
+  "endanger": {
+    "DEF": "UNK"
+  },
+  "endorse": {
+    "DEF": "UNK"
+  },
+  "endow": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "with": "UNK"
+  },
+  "engage": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "engaged": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "engineer": {
+    "DEF": "http://dbpedia.org/ontology/engineer"
+  },
+  "enhance": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "enjoy": {
+    "DEF": "UNK"
+  },
+  "enlist": {
+    "DEF": "UNK"
+  },
+  "enrol": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "enroll": {
+    "DEF": "UNK"
+  },
+  "ensure": {
+    "DEF": "UNK"
+  },
+  "enter": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "entitle": {
+    "DEF": "UNK"
+  },
+  "envision": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "episode": {
+    "DEF": "UNK",
+    "of": "UNK"
+  },
+  "equal": {
+    "DEF": "UNK"
+  },
+  "equip": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "erase": {
+    "DEF": "UNK"
+  },
+  "erect": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK"
+  },
+  "escape": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "espouse": {
+    "DEF": "UNK"
+  },
+  "essay": {
+    "DEF": "UNK"
+  },
+  "estimate": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "etch": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "evacuate": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "evaporate": {
+    "DEF": "UNK"
+  },
+  "evolve": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "with": "UNK"
+  },
+  "examine": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "under": "UNK"
+  },
+  "exceed": {
+    "DEF": "UNK",
+    "below": "UNK"
+  },
+  "excel": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "exclude": {
+    "from": "UNK"
+  },
+  "execute": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "exhaust": {
+    "DEF": "UNK"
+  },
+  "exhibit": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "in": "UNK"
+  },
+  "exist": {
+    "DEF": "UNK",
+    "before": "UNK",
+    "from": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "expand": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "from": "UNK",
+    "over": "UNK",
+    "to": "UNK"
+  },
+  "expect": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "expel": {
+    "DEF": "UNK",
+    "after": "UNK",
+    "from": "UNK"
+  },
+  "experience": {
+    "DEF": "UNK"
+  },
+  "experiment": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "explain": {
+    "DEF": "UNK"
+  },
+  "explode": {
+    "DEF": "UNK"
+  },
+  "exploit": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "explore": {
+    "DEF": "UNK"
+  },
+  "export": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "express": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "extend": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "beyond": "UNK",
+    "from": "UNK",
+    "into": "UNK",
+    "over": "UNK",
+    "to": "UNK"
+  },
+  "facilitate": {
+    "DEF": "UNK"
+  },
+  "fail": {
+    "DEF": "UNK"
+  },
+  "fall": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "to": "UNK",
+    "under": "UNK"
+  },
+  "favour": {
+    "DEF": "UNK"
+  },
+  "fear": {
+    "DEF": "UNK"
+  },
+  "feed": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "feel": {
+    "DEF": "UNK"
+  },
+  "ferment": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "field": {
+    "DEF": "http://dbpedia.org/ontology/field",
+    "as": "UNK"
+  },
+  "file": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "fill": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "with": "UNK"
+  },
+  "film": {
+    "DEF": "http://dbpedia.org/ontology/film",
+    "at": "UNK",
+    "in": "UNK"
+  },
+  "filter": {
+    "DEF": "UNK"
+  },
+  "finalize": {
+    "DEF": "UNK"
+  },
+  "fine": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "finish": {
+    "DEF": "UNK",
+    "among": "UNK",
+    "as": "UNK",
+    "at": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "to": "UNK",
+    "with": "UNK"
+  },
+  "fire": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "with": "UNK"
+  },
+  "fishedthreatene": {
+    "DEF": "UNK",
+    "due": "UNK"
+  },
+  "fit": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "flatten": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "flee": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "fluctuate": {
+    "DEF": "UNK"
+  },
+  "fly": {
+    "DEF": "UNK",
+    "during": "UNK",
+    "for": "UNK",
+    "in": "UNK"
+  },
+  "focus": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "follow": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "force": {
+    "DEF": "UNK"
+  },
+  "forfeit": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "to": "UNK"
+  },
+  "forgive": {
+    "DEF": "UNK"
+  },
+  "format": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "formulate": {
+    "DEF": "UNK"
+  },
+  "fortify": {
+    "DEF": "UNK"
+  },
+  "founder": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "free": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "frequent": {
+    "DEF": "UNK"
+  },
+  "front": {
+    "DEF": "UNK"
+  },
+  "frost": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "fulfill": {
+    "DEF": "UNK"
+  },
+  "function": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "between": "UNK"
+  },
+  "fund": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "fyrd": {
+    "DEF": "UNK"
+  },
+  "gain": {
+    "DEF": "UNK"
+  },
+  "game": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "garrison": {
+    "DEF": "http://dbpedia.org/ontology/garrison"
+  },
+  "gather": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "generalize": {
+    "DEF": "UNK"
+  },
+  "generate": {
+    "DEF": "UNK",
+    "about": "UNK",
+    "into": "UNK"
+  },
+  "get": {
+    "DEF": "UNK",
+    "into": "UNK"
+  },
+  "give": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "over": "UNK"
+  },
+  "govern": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "grant": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "greet": {
+    "DEF": "UNK"
+  },
+  "groundshare": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "group": {
+    "DEF": "UNK"
+  },
+  "grow": {
+    "DEF": "UNK",
+    "around": "UNK",
+    "as": "UNK",
+    "from": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "to": "UNK",
+    "vs.": "UNK",
+    "with": "UNK"
+  },
+  "guarantee": {
+    "DEF": "UNK"
+  },
+  "guide": {
+    "DEF": "UNK"
+  },
+  "hail": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "from": "UNK"
+  },
+  "halt": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "hamper": {
+    "DEF": "UNK"
+  },
+  "hand": {
+    "DEF": "http://dbpedia.org/ontology/hand",
+    "on": "UNK"
+  },
+  "handle": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "over": "UNK"
+  },
+  "hang": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "happen": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "harmonize": {
+    "DEF": "UNK"
+  },
+  "haul": {
+    "DEF": "UNK",
+    "around": "UNK"
+  },
+  "head": {
+    "DEF": "http://dbpedia.org/ontology/head",
+    "to": "UNK"
+  },
+  "headline": {
+    "DEF": "UNK"
+  },
+  "headquarter": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "in": "UNK"
+  },
+  "hear": {
+    "DEF": "UNK",
+    "through": "UNK"
+  },
+  "help": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "hide": {
+    "DEF": "UNK"
+  },
+  "highlight": {
+    "DEF": "UNK"
+  },
+  "hijack": {
+    "DEF": "UNK"
+  },
+  "hillserve": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "hint": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "hire": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "during": "UNK"
+  },
+  "hit": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "honor": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "at": "UNK",
+    "with": "UNK"
+  },
+  "honour": {
+    "DEF": "UNK"
+  },
+  "hope": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "house": {
+    "DEF": "http://dbpedia.org/ontology/house",
+    "between": "UNK"
+  },
+  "hurt": {
+    "DEF": "UNK"
+  },
+  "identify": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "illustrate": {
+    "DEF": "UNK"
+  },
+  "immigrate": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "impact": {
+    "DEF": "UNK"
+  },
+  "implement": {
+    "DEF": "UNK"
+  },
+  "implicate": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "imply": {
+    "DEF": "UNK"
+  },
+  "impound": {
+    "DEF": "UNK"
+  },
+  "imprison": {
+    "DEF": "UNK"
+  },
+  "improve": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "inactivate": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "inaugurate": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "incorporate": {
+    "DEF": "UNK",
+    "into": "UNK",
+    "on": "UNK"
+  },
+  "increase": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "indicate": {
+    "DEF": "UNK"
+  },
+  "induct": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "into": "UNK"
+  },
+  "indulge": {
+    "DEF": "UNK"
+  },
+  "inflate": {
+    "DEF": "UNK",
+    "unlike": "UNK"
+  },
+  "inhabit": {
+    "DEF": "UNK"
+  },
+  "inhibit": {
+    "DEF": "UNK"
+  },
+  "initiate": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "injure": {
+    "DEF": "UNK"
+  },
+  "inscribe": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "insert": {
+    "DEF": "UNK",
+    "between": "UNK"
+  },
+  "inspire": {
+    "DEF": "UNK"
+  },
+  "instal": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "institute": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "instrumental": {
+    "DEF": "UNK"
+  },
+  "integrate": {
+    "DEF": "UNK"
+  },
+  "intend": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "intensify": {
+    "into": "UNK"
+  },
+  "interact": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "interrupt": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "between": "UNK"
+  },
+  "interview": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "introduce": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "to": "UNK"
+  },
+  "inundate": {
+    "DEF": "UNK",
+    "due": "UNK"
+  },
+  "invent": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "invert": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "invest": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "investigate": {
+    "DEF": "UNK"
+  },
+  "invite": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "involve": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK"
+  },
+  "is": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "isolate": {
+    "DEF": "UNK",
+    "during": "UNK",
+    "from": "UNK",
+    "on": "UNK"
+  },
+  "issue": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "at": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "to": "UNK"
+  },
+  "join": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "for": "UNK",
+    "to": "UNK",
+    "with": "UNK"
+  },
+  "jump": {
+    "DEF": "UNK",
+    "between": "UNK"
+  },
+  "jut": {
+    "DEF": "UNK",
+    "towards": "UNK"
+  },
+  "keep": {
+    "DEF": "UNK"
+  },
+  "kick": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "kickstart": {
+    "DEF": "UNK"
+  },
+  "kidnap": {
+    "DEF": "UNK"
+  },
+  "kill": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "between": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "under": "UNK"
+  },
+  "known": {
+    "DEF": "UNK"
+  },
+  "lack": {
+    "DEF": "UNK"
+  },
+  "last": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "from": "UNK",
+    "on": "UNK",
+    "over": "UNK",
+    "to": "UNK",
+    "until": "UNK"
+  },
+  "lay": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "lead": {
+    "DEF": "UNK",
+    "against": "UNK",
+    "as": "UNK",
+    "from": "UNK",
+    "to": "UNK",
+    "with": "UNK"
+  },
+  "leader": {
+    "DEF": "UNK",
+    "of": "UNK"
+  },
+  "learn": {
+    "DEF": "UNK"
+  },
+  "lease": {
+    "DEF": "UNK"
+  },
+  "leave": {
+    "DEF": "UNK",
+    "after": "UNK",
+    "in": "UNK",
+    "into": "UNK",
+    "off": "UNK"
+  },
+  "lee": {
+    "DEF": "UNK"
+  },
+  "level": {
+    "DEF": "UNK"
+  },
+  "liken": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "line": {
+    "DEF": "UNK"
+  },
+  "link": {
+    "DEF": "UNK",
+    "to": "UNK",
+    "with": "UNK"
+  },
+  "localize": {
+    "DEF": "UNK"
+  },
+  "lodge": {
+    "DEF": "UNK"
+  },
+  "look": {
+    "DEF": "UNK"
+  },
+  "lose": {
+    "DEF": "UNK",
+    "against": "UNK",
+    "at": "UNK",
+    "in": "UNK",
+    "to": "UNK",
+    "with": "UNK"
+  },
+  "love": {
+    "DEF": "UNK"
+  },
+  "maintain": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "mandate": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "manifest": {
+    "DEF": "UNK"
+  },
+  "map": {
+    "DEF": "http://dbpedia.org/ontology/map",
+    "for": "UNK",
+    "from": "UNK",
+    "in": "UNK"
+  },
+  "mar": {
+    "DEF": "UNK"
+  },
+  "marble": {
+    "DEF": "UNK"
+  },
+  "mark": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "market": {
+    "DEF": "UNK"
+  },
+  "married": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "match": {
+    "DEF": "UNK"
+  },
+  "mayor": {
+    "DEF": "UNK",
+    "of": "UNK"
+  },
+  "meander": {
+    "DEF": "UNK",
+    "under": "UNK"
+  },
+  "measure": {
+    "DEF": "UNK"
+  },
+  "medal": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "meet": {
+    "DEF": "UNK",
+    "between": "UNK",
+    "in": "UNK",
+    "to": "UNK",
+    "with": "UNK"
+  },
+  "member": {
+    "DEF": "http://dbpedia.org/ontology/member"
+  },
+  "mention": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "merge": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "into": "UNK",
+    "of": "UNK",
+    "with": "UNK"
+  },
+  "metabolize": {
+    "DEF": "UNK"
+  },
+  "migrate": {
+    "DEF": "UNK",
+    "around": "UNK",
+    "from": "UNK",
+    "to": "UNK"
+  },
+  "mincompete": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "mirror": {
+    "DEF": "UNK"
+  },
+  "misrepresent": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "mix": {
+    "DEF": "UNK"
+  },
+  "mock": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "model": {
+    "DEF": "http://dbpedia.org/ontology/model",
+    "as": "UNK"
+  },
+  "modify": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "mother": {
+    "DEF": "http://dbpedia.org/ontology/mother"
+  },
+  "mount": {
+    "DEF": "http://dbpedia.org/ontology/mount",
+    "on": "UNK"
+  },
+  "murder": {
+    "DEF": "UNK"
+  },
+  "narrate": {
+    "DEF": "UNK"
+  },
+  "navigate": {
+    "DEF": "UNK"
+  },
+  "near": {
+    "DEF": "UNK"
+  },
+  "need": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "in": "UNK"
+  },
+  "neglect": {
+    "DEF": "UNK"
+  },
+  "neighbour": {
+    "DEF": "UNK"
+  },
+  "nickname": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "nomenclature": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "nominate": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "at": "UNK",
+    "for": "UNK",
+    "on": "UNK",
+    "to": "UNK"
+  },
+  "note": {
+    "DEF": "http://dbpedia.org/ontology/note",
+    "for": "UNK"
+  },
+  "noted": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "novel": {
+    "DEF": "UNK",
+    "until": "UNK"
+  },
+  "object": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "observe": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "obtain": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "occupy": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "occur": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "at": "UNK",
+    "between": "UNK",
+    "during": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "offer": {
+    "DEF": "UNK"
+  },
+  "one": {
+    "DEF": "UNK"
+  },
+  "oppose": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "orbit": {
+    "DEF": "UNK"
+  },
+  "ordain": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "to": "UNK"
+  },
+  "order": {
+    "DEF": "http://dbpedia.org/ontology/order",
+    "on": "UNK"
+  },
+  "organise": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "until": "UNK"
+  },
+  "organize": {
+    "DEF": "UNK",
+    "around": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "to": "UNK"
+  },
+  "outline": {
+    "DEF": "UNK"
+  },
+  "outscore": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "outskirt": {
+    "DEF": "UNK",
+    "of": "UNK"
+  },
+  "overcome": {
+    "DEF": "UNK"
+  },
+  "overlap": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "overlay": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "overlie": {
+    "DEF": "UNK"
+  },
+  "overlook": {
+    "DEF": "UNK"
+  },
+  "oversee": {
+    "DEF": "UNK"
+  },
+  "overturn": {
+    "DEF": "UNK"
+  },
+  "ownedon": {
+    "DEF": "UNK"
+  },
+  "oxidize": {
+    "DEF": "UNK"
+  },
+  "paint": {
+    "DEF": "UNK",
+    "of": "UNK",
+    "on": "UNK"
+  },
+  "pair": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "opposite": "UNK",
+    "with": "UNK"
+  },
+  "parade": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "parody": {
+    "DEF": "UNK"
+  },
+  "part": {
+    "DEF": "http://dbpedia.org/ontology/part"
+  },
+  "participate": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "from": "UNK",
+    "in": "UNK",
+    "with": "UNK"
+  },
+  "partition": {
+    "DEF": "UNK",
+    "into": "UNK"
+  },
+  "partner": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "pass": {
+    "DEF": "UNK",
+    "through": "UNK"
+  },
+  "patent": {
+    "DEF": "http://dbpedia.org/ontology/patent",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "pave": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "pay": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "for": "UNK"
+  },
+  "peak": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "penetrate": {
+    "DEF": "UNK"
+  },
+  "people": {
+    "DEF": "UNK"
+  },
+  "perceive": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "perform": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "at": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "with": "UNK",
+    "within": "UNK"
+  },
+  "perish": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "permit": {
+    "DEF": "UNK"
+  },
+  "persuade": {
+    "DEF": "UNK"
+  },
+  "pertain": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "photograph": {
+    "DEF": "UNK"
+  },
+  "pick": {
+    "DEF": "UNK"
+  },
+  "pilot": {
+    "DEF": "UNK"
+  },
+  "pioneer": {
+    "DEF": "UNK"
+  },
+  "pitch": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "place": {
+    "DEF": "http://dbpedia.org/ontology/place",
+    "at": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "to": "UNK",
+    "with": "UNK",
+    "within": "UNK"
+  },
+  "plan": {
+    "DEF": "UNK"
+  },
+  "plead": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "plot": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "plug": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "point": {
+    "DEF": "UNK"
+  },
+  "popularise": {
+    "DEF": "UNK"
+  },
+  "popularize": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "populate": {
+    "DEF": "UNK"
+  },
+  "portray": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "pose": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "power": {
+    "DEF": "http://dbpedia.org/ontology/power",
+    "in": "UNK"
+  },
+  "practice": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "practise": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK"
+  },
+  "praise": {
+    "DEF": "UNK"
+  },
+  "predecease": {
+    "DEF": "UNK"
+  },
+  "predict": {
+    "DEF": "UNK"
+  },
+  "prefer": {
+    "DEF": "UNK"
+  },
+  "premiere": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "from": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "prepare": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "from": "UNK",
+    "with": "UNK"
+  },
+  "prescribe": {
+    "DEF": "UNK"
+  },
+  "present": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "preserve": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "at": "UNK",
+    "in": "UNK"
+  },
+  "preside": {
+    "DEF": "UNK",
+    "of": "UNK",
+    "over": "UNK"
+  },
+  "press": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "presume": {
+    "DEF": "UNK"
+  },
+  "pretend": {
+    "DEF": "UNK"
+  },
+  "prevent": {
+    "DEF": "UNK"
+  },
+  "prey": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "print": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "prior": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "proceed": {
+    "DEF": "UNK",
+    "over": "UNK"
+  },
+  "process": {
+    "DEF": "UNK"
+  },
+  "prohibit": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "promote": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "due": "UNK",
+    "on": "UNK",
+    "to": "UNK"
+  },
+  "prompt": {
+    "DEF": "UNK"
+  },
+  "pronounce": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "propagate": {
+    "DEF": "UNK"
+  },
+  "propose": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "in": "UNK"
+  },
+  "prosecute": {
+    "DEF": "UNK"
+  },
+  "prosper": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "protect": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "protrude": {
+    "DEF": "UNK",
+    "into": "UNK"
+  },
+  "prove": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "provide": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "through": "UNK"
+  },
+  "purchase": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "pursue": {
+    "DEF": "UNK"
+  },
+  "put": {
+    "DEF": "UNK",
+    "around": "UNK",
+    "as": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "qualify": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "to": "UNK"
+  },
+  "quit": {
+    "DEF": "UNK"
+  },
+  "quote": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "raid": {
+    "DEF": "UNK"
+  },
+  "raise": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "range": {
+    "DEF": "http://dbpedia.org/ontology/range",
+    "from": "UNK"
+  },
+  "rank": {
+    "DEF": "http://dbpedia.org/ontology/rank",
+    "among": "UNK",
+    "as": "UNK",
+    "behind": "UNK",
+    "in": "UNK"
+  },
+  "rate": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK"
+  },
+  "ratify": {
+    "DEF": "UNK"
+  },
+  "re": {
+    "DEF": "UNK"
+  },
+  "reach": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "read": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "rear": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "rebuild": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "for": "UNK",
+    "in": "UNK"
+  },
+  "recall": {
+    "DEF": "UNK"
+  },
+  "recede": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "recognise": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "recognize": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "recommend": {
+    "DEF": "UNK"
+  },
+  "reconstruct": {
+    "DEF": "UNK"
+  },
+  "recount": {
+    "DEF": "UNK"
+  },
+  "recover": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "recreate": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "recruit": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "redefine": {
+    "DEF": "UNK"
+  },
+  "redesign": {
+    "DEF": "UNK"
+  },
+  "redirect": {
+    "DEF": "UNK"
+  },
+  "reduce": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "in": "UNK"
+  },
+  "reexamine": {
+    "DEF": "UNK"
+  },
+  "reference": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "reflect": {
+    "DEF": "UNK"
+  },
+  "reform": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "refuse": {
+    "DEF": "UNK"
+  },
+  "regain": {
+    "DEF": "UNK"
+  },
+  "regard": {
+    "DEF": "UNK",
+    "after": "UNK",
+    "as": "UNK"
+  },
+  "register": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK"
+  },
+  "regroup": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "regulate": {
+    "DEF": "UNK"
+  },
+  "reign": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "reinstate": {
+    "DEF": "UNK",
+    "during": "UNK"
+  },
+  "reinvent": {
+    "DEF": "UNK"
+  },
+  "reissue": {
+    "DEF": "UNK"
+  },
+  "reiterate": {
+    "DEF": "UNK"
+  },
+  "related": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "relay": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "relegate": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "to": "UNK"
+  },
+  "relinquish": {
+    "DEF": "UNK"
+  },
+  "relocate": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "relocatedoperation": {
+    "DEF": "UNK"
+  },
+  "rely": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "remain": {
+    "DEF": "UNK",
+    "after": "UNK",
+    "as": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "of": "UNK",
+    "under": "UNK",
+    "until": "UNK"
+  },
+  "remarry": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "remember": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "for": "UNK"
+  },
+  "remove": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "rename": {
+    "DEF": "UNK",
+    "after": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "through": "UNK",
+    "to": "UNK"
+  },
+  "renew": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "renominate": {
+    "DEF": "UNK"
+  },
+  "renovate": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "reopen": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "repeal": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "repeat": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "replace": {
+    "DEF": "UNK",
+    "between": "UNK",
+    "in": "UNK"
+  },
+  "report": {
+    "DEF": "UNK",
+    "around": "UNK",
+    "from": "UNK",
+    "over": "UNK"
+  },
+  "reprise": {
+    "DEF": "UNK"
+  },
+  "republish": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "repulse": {
+    "DEF": "UNK"
+  },
+  "requisition": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "rescue": {
+    "DEF": "UNK"
+  },
+  "research": {
+    "DEF": "UNK"
+  },
+  "resemble": {
+    "DEF": "UNK"
+  },
+  "reserve": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "in": "UNK"
+  },
+  "resettle": {
+    "DEF": "UNK"
+  },
+  "resign": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "resist": {
+    "DEF": "UNK"
+  },
+  "resolve": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "rest": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "resticte": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "restore": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "in": "UNK"
+  },
+  "restrict": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "restructure": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "result": {
+    "DEF": "http://dbpedia.org/ontology/result",
+    "from": "UNK",
+    "in": "UNK"
+  },
+  "resume": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "resurface": {
+    "DEF": "UNK"
+  },
+  "retain": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "retire": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "at": "UNK",
+    "from": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "to": "UNK"
+  },
+  "retreat": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "return": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "from": "UNK",
+    "to": "UNK"
+  },
+  "reunite": {
+    "DEF": "UNK"
+  },
+  "reveal": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "revictimize": {
+    "DEF": "UNK"
+  },
+  "revive": {
+    "in": "UNK"
+  },
+  "revolve": {
+    "DEF": "UNK",
+    "around": "UNK"
+  },
+  "reward": {
+    "DEF": "UNK"
+  },
+  "rework": {
+    "DEF": "UNK"
+  },
+  "rewrite": {
+    "DEF": "UNK"
+  },
+  "roam": {
+    "DEF": "UNK"
+  },
+  "roast": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "role": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "root": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "rotate": {
+    "DEF": "UNK"
+  },
+  "row": {
+    "DEF": "UNK"
+  },
+  "rule": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "from": "UNK",
+    "over": "UNK"
+  },
+  "sacrifice": {
+    "DEF": "UNK"
+  },
+  "sail": {
+    "DEF": "UNK",
+    "around": "UNK",
+    "on": "UNK",
+    "under": "UNK"
+  },
+  "sample": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "sanction": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "satirise": {
+    "DEF": "UNK"
+  },
+  "save": {
+    "DEF": "UNK"
+  },
+  "say": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "in": "UNK"
+  },
+  "schedule": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "score": {
+    "DEF": "http://dbpedia.org/ontology/score"
+  },
+  "scrap": {
+    "DEF": "UNK"
+  },
+  "screen": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "seat": {
+    "DEF": "UNK"
+  },
+  "second": {
+    "DEF": "http://dbpedia.org/ontology/second"
+  },
+  "secrete": {
+    "DEF": "UNK"
+  },
+  "secure": {
+    "DEF": "UNK"
+  },
+  "see": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "in": "UNK",
+    "with": "UNK"
+  },
+  "seek": {
+    "DEF": "UNK"
+  },
+  "seem": {
+    "DEF": "UNK"
+  },
+  "seize": {
+    "DEF": "UNK"
+  },
+  "select": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "at": "UNK",
+    "for": "UNK",
+    "in": "UNK"
+  },
+  "sell": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "send": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "sentence": {
+    "DEF": "UNK",
+    "after": "UNK"
+  },
+  "separate": {
+    "DEF": "UNK"
+  },
+  "serialise": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "serialize": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "service": {
+    "DEF": "http://dbpedia.org/ontology/service"
+  },
+  "settle": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "at": "UNK",
+    "in": "UNK"
+  },
+  "setto": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "sew": {
+    "DEF": "UNK"
+  },
+  "shape": {
+    "DEF": "http://dbpedia.org/ontology/shape",
+    "of": "UNK"
+  },
+  "share": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "sheathe": {
+    "DEF": "UNK"
+  },
+  "shift": {
+    "DEF": "UNK",
+    "between": "UNK",
+    "in": "UNK"
+  },
+  "ship": {
+    "DEF": "UNK",
+    "to": "UNK",
+    "with": "UNK"
+  },
+  "shipwreck": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "show": {
+    "DEF": "http://dbpedia.org/ontology/show",
+    "as": "UNK",
+    "at": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "with": "UNK"
+  },
+  "showcase": {
+    "DEF": "UNK"
+  },
+  "shut": {
+    "DEF": "UNK"
+  },
+  "sign": {
+    "DEF": "UNK",
+    "aboard": "UNK",
+    "as": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "to": "UNK",
+    "with": "UNK"
+  },
+  "simulate": {
+    "DEF": "UNK"
+  },
+  "simulcast": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "sing": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "sink": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "sit": {
+    "DEF": "UNK",
+    "about": "UNK",
+    "for": "UNK",
+    "from": "UNK",
+    "in": "UNK",
+    "to": "UNK"
+  },
+  "site": {
+    "DEF": "UNK",
+    "along": "UNK"
+  },
+  "slap": {
+    "DEF": "UNK"
+  },
+  "slope": {
+    "DEF": "UNK"
+  },
+  "solve": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "sort": {
+    "DEF": "UNK"
+  },
+  "spark": {
+    "DEF": "UNK"
+  },
+  "spawn": {
+    "DEF": "UNK"
+  },
+  "specialise": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "specialize": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "specify": {
+    "DEF": "UNK"
+  },
+  "spend": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "split": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "between": "UNK",
+    "into": "UNK"
+  },
+  "spokeswoman": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "sponsor": {
+    "DEF": "UNK"
+  },
+  "spot": {
+    "DEF": "UNK"
+  },
+  "spread": {
+    "DEF": "UNK",
+    "over": "UNK",
+    "throughout": "UNK",
+    "via": "UNK"
+  },
+  "staff": {
+    "DEF": "http://dbpedia.org/ontology/staff",
+    "with": "UNK"
+  },
+  "stage": {
+    "DEF": "UNK"
+  },
+  "stalk": {
+    "DEF": "UNK"
+  },
+  "standardize": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "start": {
+    "DEF": "http://dbpedia.org/ontology/start",
+    "as": "UNK",
+    "at": "UNK",
+    "from": "UNK",
+    "in": "UNK",
+    "into": "UNK",
+    "on": "UNK",
+    "over": "UNK",
+    "to": "UNK",
+    "with": "UNK"
+  },
+  "state": {
+    "DEF": "http://dbpedia.org/ontology/state",
+    "in": "UNK",
+    "into": "UNK",
+    "of": "UNK"
+  },
+  "station": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "stay": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "under": "UNK"
+  },
+  "steal": {
+    "DEF": "UNK",
+    "over": "UNK"
+  },
+  "steer": {
+    "DEF": "UNK"
+  },
+  "step": {
+    "DEF": "UNK"
+  },
+  "stop": {
+    "DEF": "UNK"
+  },
+  "store": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "stream": {
+    "DEF": "UNK"
+  },
+  "strengthen": {
+    "DEF": "UNK"
+  },
+  "stretch": {
+    "DEF": "UNK",
+    "along": "UNK",
+    "from": "UNK"
+  },
+  "stricken": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "strike": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "subdivide": {
+    "DEF": "UNK",
+    "into": "UNK"
+  },
+  "substitute": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "sue": {
+    "DEF": "UNK"
+  },
+  "suffer": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "of": "UNK"
+  },
+  "suggest": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "suit": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "summarize": {
+    "DEF": "UNK"
+  },
+  "summon": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "sung": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "supervise": {
+    "DEF": "UNK"
+  },
+  "supply": {
+    "DEF": "http://dbpedia.org/ontology/supply",
+    "as": "UNK"
+  },
+  "support": {
+    "DEF": "UNK",
+    "for": "UNK",
+    "in": "UNK"
+  },
+  "suppose": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "suppress": {
+    "DEF": "UNK"
+  },
+  "surpass": {
+    "DEF": "UNK"
+  },
+  "surrender": {
+    "DEF": "UNK"
+  },
+  "surround": {
+    "DEF": "UNK"
+  },
+  "survey": {
+    "DEF": "UNK"
+  },
+  "survive": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "in": "UNK"
+  },
+  "suspend": {
+    "DEF": "UNK",
+    "due": "UNK",
+    "from": "UNK"
+  },
+  "sustain": {
+    "DEF": "UNK"
+  },
+  "swear": {
+    "DEF": "UNK",
+    "as": "UNK"
+  },
+  "sweep": {
+    "DEF": "UNK",
+    "across": "UNK"
+  },
+  "swim": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "switch": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "symbolize": {
+    "DEF": "UNK"
+  },
+  "synonymize": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "talk": {
+    "DEF": "UNK"
+  },
+  "target": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "teach": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "in": "UNK"
+  },
+  "team": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "televise": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "tell": {
+    "DEF": "UNK",
+    "of": "UNK"
+  },
+  "tend": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "terminate": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "test": {
+    "DEF": "UNK"
+  },
+  "testimonial": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "text": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "theme": {
+    "DEF": "UNK",
+    "along": "UNK",
+    "around": "UNK"
+  },
+  "theorize": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "thicken": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "think": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK"
+  },
+  "threaten": {
+    "DEF": "UNK"
+  },
+  "thrive": {
+    "DEF": "UNK",
+    "until": "UNK"
+  },
+  "throw": {
+    "DEF": "UNK"
+  },
+  "tie": {
+    "DEF": "http://dbpedia.org/ontology/tie",
+    "with": "UNK"
+  },
+  "time": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "title": {
+    "DEF": "http://dbpedia.org/ontology/title",
+    "as": "UNK"
+  },
+  "top": {
+    "DEF": "UNK"
+  },
+  "touch": {
+    "DEF": "UNK"
+  },
+  "tour": {
+    "DEF": "UNK",
+    "with": "UNK"
+  },
+  "trace": {
+    "DEF": "UNK",
+    "to": "UNK"
+  },
+  "trade": {
+    "on": "UNK",
+    "to": "UNK"
+  },
+  "train": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "for": "UNK",
+    "in": "UNK",
+    "under": "UNK"
+  },
+  "transfer": {
+    "DEF": "UNK",
+    "to": "UNK",
+    "up": "UNK"
+  },
+  "transform": {
+    "DEF": "UNK",
+    "into": "UNK"
+  },
+  "translate": {
+    "DEF": "UNK",
+    "about": "UNK",
+    "as": "UNK",
+    "from": "UNK",
+    "in": "UNK",
+    "into": "UNK",
+    "to": "UNK"
+  },
+  "transmit": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "transport": {
+    "DEF": "UNK"
+  },
+  "travel": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "on": "UNK",
+    "over": "UNK",
+    "to": "UNK",
+    "with": "UNK"
+  },
+  "treat": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "in": "UNK"
+  },
+  "truncate": {
+    "DEF": "UNK",
+    "for": "UNK"
+  },
+  "try": {
+    "DEF": "UNK"
+  },
+  "turn": {
+    "DEF": "UNK",
+    "in": "UNK",
+    "into": "UNK",
+    "to": "UNK"
+  },
+  "tutor": {
+    "DEF": "UNK"
+  },
+  "twine": {
+    "DEF": "UNK",
+    "around": "UNK"
+  },
+  "umpire": {
+    "DEF": "UNK"
+  },
+  "unable": {
+    "DEF": "UNK"
+  },
+  "uncover": {
+    "DEF": "UNK"
+  },
+  "undergo": {
+    "DEF": "UNK"
+  },
+  "understand": {
+    "DEF": "UNK"
+  },
+  "undertake": {
+    "DEF": "UNK"
+  },
+  "unseat": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "unveil": {
+    "DEF": "UNK",
+    "at": "UNK",
+    "in": "UNK",
+    "on": "UNK"
+  },
+  "upgrade": {
+    "DEF": "UNK"
+  },
+  "upset": {
+    "DEF": "UNK"
+  },
+  "utilize": {
+    "DEF": "UNK"
+  },
+  "vary": {
+    "DEF": "UNK",
+    "between": "UNK"
+  },
+  "ventilate": {
+    "DEF": "UNK",
+    "until": "UNK"
+  },
+  "vest": {
+    "DEF": "UNK"
+  },
+  "vibrate": {
+    "DEF": "UNK"
+  },
+  "view": {
+    "DEF": "UNK"
+  },
+  "visit": {
+    "DEF": "UNK",
+    "on": "UNK"
+  },
+  "voice": {
+    "DEF": "http://dbpedia.org/ontology/voice"
+  },
+  "volunteer": {
+    "for": "UNK"
+  },
+  "vote": {
+    "DEF": "UNK",
+    "via": "UNK"
+  },
+  "wage": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "walk": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "want": {
+    "DEF": "UNK",
+    "of": "UNK"
+  },
+  "wasa": {
+    "DEF": "UNK"
+  },
+  "wear": {
+    "DEF": "UNK",
+    "as": "UNK",
+    "on": "UNK",
+    "to": "UNK"
+  },
+  "wedge": {
+    "DEF": "UNK",
+    "between": "UNK"
+  },
+  "welcome": {
+    "DEF": "UNK"
+  },
+  "widow": {
+    "DEF": "UNK"
+  },
+  "will": {
+    "DEF": "UNK"
+  },
+  "wind": {
+    "DEF": "UNK",
+    "at": "UNK"
+  },
+  "withdraw": {
+    "DEF": "UNK",
+    "from": "UNK",
+    "with": "UNK"
+  },
+  "witness": {
+    "DEF": "UNK"
+  },
+  "worry": {
+    "DEF": "UNK",
+    "from": "UNK"
+  },
+  "worship": {
+    "DEF": "UNK"
+  },
+  "wound": {
+    "DEF": "UNK",
+    "during": "UNK"
+  },
+  "wrap": {
+    "DEF": "UNK",
+    "in": "UNK"
+  },
+  "written": {
+    "DEF": "UNK",
+    "by": "UNK"
+  },
+  "yellow": {
+    "DEF": "UNK"
+  },
+  "born": {
+    "DEF": "http://dbpedia.org/ontology/birthPlace",
+    "in": "http://dbpedia.org/ontology/birthPlace",
+    "on": "http://dbpedia.org/ontology/birthDate",
+    "to": [
+      "http://dbpedia.org/ontology/parent",
+      "http://dbpedia.org/ontology/mother"
+    ]
   }
 }
