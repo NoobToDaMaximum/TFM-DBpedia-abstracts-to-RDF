@@ -4833,15 +4833,20 @@
   },
   "wound": {
     "DEF": "UNK",
-    "during": "UNK"
+    "during": "UNK",
+    "in" : "UNK",
+    "by" : "UNK"
   },
   "wrap": {
     "DEF": "UNK",
-    "in": "UNK"
+    "in": "UNK",
+    "around" : "UNK",
+    "up": "UNK"
   },
   "written": {
     "DEF": "UNK",
-    "by": "UNK"
+    "by": "http://dbpedia.org/ontology/author",
+    "in": "http://dbpedia.org/ontology/language"
   },
   "yellow": {
     "DEF": "UNK"
