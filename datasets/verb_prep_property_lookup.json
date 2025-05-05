@@ -3722,10 +3722,42 @@
   },
   "rank": {
     "DEF": "http://dbpedia.org/ontology/rank",
-    "among": "UNK",
-    "as": "UNK",
-    "behind": "UNK",
-    "in": "UNK"
+    "among": [
+      "http://dbpedia.org/ontology/rank",
+      "http://dbpedia.org/ontology/ranking"
+    ],
+    "as": [
+      "http://dbpedia.org/ontology/militaryRank",
+      "http://dbpedia.org/ontology/bestRankDouble",
+      "http://dbpedia.org/ontology/bestRankSingle",
+      "http://dbpedia.org/ontology/bestWsopRank",
+      "http://dbpedia.org/ontology/rankAgreement"
+    ],
+    "behind": [
+      "http://dbpedia.org/ontology/bestRankDouble",
+      "http://dbpedia.org/ontology/bestRankSingle",
+      "http://dbpedia.org/ontology/bestWsopRank"
+    ],
+    "in": [
+      "http://dbpedia.org/ontology/ranking",
+      "http://dbpedia.org/ontology/rankingsDoubles",
+      "http://dbpedia.org/ontology/rankingsSingles",
+      "http://dbpedia.org/ontology/humanDevelopmentIndexRankingCategory",
+      "http://dbpedia.org/ontology/cityRank",
+      "http://dbpedia.org/ontology/continentRank",
+      "http://dbpedia.org/ontology/countryRank",
+      "http://dbpedia.org/ontology/giniCoefficientRanking",
+      "http://dbpedia.org/ontology/grossDomesticProductRank",
+      "http://dbpedia.org/ontology/areaTotalRanking",
+      "http://dbpedia.org/ontology/perCapitaIncomeRank",
+      "http://dbpedia.org/ontology/purchasingPowerParityRank",
+      "http://dbpedia.org/ontology/rankArea",
+      "http://dbpedia.org/ontology/rankInFinalMedalCount",
+      "http://dbpedia.org/ontology/rankPopulation",
+      "http://dbpedia.org/ontology/populationTotalRanking",
+      "http://dbpedia.org/ontology/humanDevelopmentIndex",
+      "http://dbpedia.org/ontology/nationalRanking"
+    ]
   },
   "rate": {
     "DEF": "UNK",
