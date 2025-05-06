@@ -10,9 +10,17 @@ SPOTLIGHT_LOCAL_URL = "http://localhost:2222/rest/annotate/"
 UNKOWN_VALUE = "UNK"
 DEFAULT_VERB = "DEF"
 
+import csv
+from pathlib import Path
+missing_log_path = Path("code/output/missing_predicate_mappings.csv")
 ###############
 # Text to RDF #
 ###############
+# Create the file and write headers if it doesn't exist
+if not missing_log_path.exists():
+    with open(missing_log_path, mode='w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(["Verb (Lemma)", "Preposition"])
 
 
 def get_annotated_text_dict(text, service_url, confidence=0.3, support=0, dbpedia_only=True):
@@ -144,6 +152,13 @@ def replace_text_URI(triples, term_URI_dict, term_types_dict, prop_lex_table, cl
                     pred_URI = prop_lex_table[verb][DEFAULT_VERB]
             else:
                 pred_URI = Literal(verb)
+                print(f"❌ No predicate mapping for: {verb} + {prep}. Using literal.")
+                logged_mappings = set()
+                if (verb, prep) not in logged_mappings:
+                    with open(missing_log_path, mode='a', newline='') as f:
+                        writer = csv.writer(f)
+                        writer.writerow([verb, prep])
+                    logged_mappings.add((verb, prep))
 
             if (pred_URI == UNKOWN_VALUE) | (isinstance(pred_URI, Literal)):
                 # save object Literal in log file
