@@ -97,6 +97,7 @@ def replace_text_URI(triples, term_URI_dict, term_types_dict, prop_lex_table, cl
     new_triples = []
     timestr = time.strftime("%Y%m%d-%H%M")
 
+    logged_mappings = set()  # Set to keep track of logged mappings
     for triple in triples:
         subj_text = [x for x in triple.subj if x.dep_ != "det"]
         subj_text = ' '.join([x.text.lower() for x in subj_text])
@@ -153,7 +154,6 @@ def replace_text_URI(triples, term_URI_dict, term_types_dict, prop_lex_table, cl
             else:
                 pred_URI = Literal(verb)
                 print(f"❌ No predicate mapping for: {verb} + {prep}. Using literal.")
-                logged_mappings = set()
                 if (verb, prep) not in logged_mappings:
                     with open(missing_log_path, mode='a', newline='') as f:
                         writer = csv.writer(f)
