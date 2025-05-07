@@ -12,7 +12,7 @@ DEFAULT_VERB = "DEF"
 
 import csv
 from pathlib import Path
-missing_log_path = Path("code/output/missing_predicate_mappings.csv")
+missing_log_path = Path("code/app/output/missing_predicate_mappings.csv")
 ###############
 # Text to RDF #
 ###############

@@ -4752,13 +4752,15 @@
     "DEF": "UNK"
   },
   "undergo": {
-    "DEF": "UNK"
+    "DEF": "http://dbpedia.org/ontology/procedure"
   },
   "understand": {
-    "DEF": "UNK"
+    "DEF": "UNK",
+    "about": "UNK",
+    "of": "UNK"
   },
   "undertake": {
-    "DEF": "UNK"
+    "DEF": "http://dbpedia.org/ontology/activity"
   },
   "unseat": {
     "DEF": "UNK",
@@ -4771,30 +4773,49 @@
     "on": "UNK"
   },
   "upgrade": {
-    "DEF": "UNK"
+    "DEF": "UNK",
+    "to": "http://dbpedia.org/ontology/successor",
+    "from": "UNK",
+    "with": "UNK"
   },
   "upset": {
-    "DEF": "UNK"
+    "DEF": "UNK",
+    "by": "http://dbpedia.org/ontology/defeat",
+    "with": "UNK",
+    "over": "UNK"
   },
   "utilize": {
-    "DEF": "UNK"
+    "DEF": "http://dbpedia.org/ontology/uses",
+    "by": "http://dbpedia.org/ontology/usedBy",
+    "for": "http://dbpedia.org/ontology/usage"
   },
   "vary": {
     "DEF": "UNK",
-    "between": "UNK"
+    "between": "UNK",
+    "across": "UNK",
+    "with": "UNK"
   },
   "ventilate": {
     "DEF": "UNK",
-    "until": "UNK"
+    "until": "UNK",
+    "for": "UNK",
+    "to": "UNK"
   },
   "vest": {
-    "DEF": "UNK"
+    "DEF": "UNK",
+    "in": [
+      "http://dbpedia.org/ontology/authority",
+      "http://dbpedia.org/ontology/jurisdiction"
+    ],
+    "with": "UNK"
   },
   "vibrate": {
-    "DEF": "UNK"
+    "DEF": "UNK",
+    "at": "http://dbpedia.org/ontology/frequency"
   },
   "view": {
-    "DEF": "UNK"
+    "DEF": "UNK",
+    "as": "UNK"
   },
   "visit": {
     "DEF": "UNK",
@@ -4804,11 +4825,14 @@
     "DEF": "http://dbpedia.org/ontology/voice"
   },
   "volunteer": {
+    "DEF": "UNK",
     "for": "UNK"
   },
   "vote": {
     "DEF": "UNK",
-    "via": "UNK"
+    "via": "UNK",
+    "for": "http://dbpedia.org/ontology/votesFor",
+    "against": "http://dbpedia.org/ontology/votesAgainst"
   },
   "wage": {
     "DEF": "UNK",
@@ -4819,11 +4843,10 @@
     "in": "UNK"
   },
   "want": {
-    "DEF": "UNK",
-    "of": "UNK"
-  },
-  "wasa": {
-    "DEF": "UNK"
+    "DEF": "http://dbpedia.org/ontology/interest",
+    "of": "UNK",
+    "for": "UNK",
+    "to": "http://dbpedia.org/ontology/purpose"
   },
   "wear": {
     "DEF": "UNK",
@@ -4833,16 +4856,18 @@
   },
   "wedge": {
     "DEF": "UNK",
-    "between": "UNK"
+    "between": "UNK",
+    "into": "UNK",
+    "in": "UNK"
   },
   "welcome": {
-    "DEF": "UNK"
+    "DEF": "UNK",
+    "by": "UNK",
+    "with": "UNK"
   },
   "widow": {
-    "DEF": "UNK"
-  },
-  "will": {
-    "DEF": "UNK"
+    "DEF": "UNK",
+    "by": "UNK"
   },
   "wind": {
     "DEF": "UNK",
@@ -4861,18 +4886,19 @@
     "from": "UNK"
   },
   "worship": {
-    "DEF": "UNK"
+    "DEF": "UNK",
+    "at": "UNK"
   },
   "wound": {
     "DEF": "UNK",
     "during": "UNK",
-    "in" : "UNK",
-    "by" : "UNK"
+    "in": "UNK",
+    "by": "UNK"
   },
   "wrap": {
     "DEF": "UNK",
     "in": "UNK",
-    "around" : "UNK",
+    "around": "UNK",
     "up": "UNK"
   },
   "written": {
