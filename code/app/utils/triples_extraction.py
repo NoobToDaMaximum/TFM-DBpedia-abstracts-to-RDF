@@ -68,6 +68,7 @@ def get_simple_triples(nlp, sentence):
         preds.append(span[0])
         pos_of_verb = span[0].i
     else:
+        tracking_log(f"No predicate match for sentence: {sentence}", level=2)
         return
 
     ## SUBJECT
@@ -114,8 +115,16 @@ def get_simple_triples(nlp, sentence):
     #### THIS IS THE REAL CODE ####
     dep_matches = dep_matcher(doc)
 
+    ### LOGGING ###
+    for match_id, token_id in dep_matches:
+        pattern_name = nlp.vocab.strings[match_id]
+        tracking_log(f"Matched pattern: {pattern_name} | Tokens: {[doc[i].text for i in token_id]}", level=3)
+
+    # Log what matches were found (if any), even if empty
+    tracking_log(f"Dependency matches for '{sentence}': {dep_matches}", level=3)    
     objs = []
     if not dep_matches:
+        tracking_log(f"No object pattern match for sentence: {sentence}", level=2)
         return []
     for match_id, token_id in dep_matches:
         string_id = nlp.vocab.strings[match_id]  # Get string representation
@@ -185,6 +194,9 @@ def get_simple_triples(nlp, sentence):
             conjs = doc[token_id[0]].conjuncts  # coordinated tokens, not including the token itself
             for c in conjs:
                 objs.append(get_sentence_subtree_from_token(doc[c.i], ["cc", "conj"], inner=False))
+        
+        ### LOGGING ###
+        tracking_log(f"Extracted {len(triples)} triples from: '{sentence}'", level=3)
 
     # Build triples
     triples = []
