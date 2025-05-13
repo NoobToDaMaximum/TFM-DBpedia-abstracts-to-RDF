@@ -5,6 +5,16 @@ FOLDER_PATH = 'log_files/'
 if not os.path.isdir(FOLDER_PATH):
     os.mkdir(FOLDER_PATH)
 
+import csv
+
+def log_failed_extraction(sentence, reason, csv_path='log_files/failed_extractions.csv'):
+    file_exists = os.path.isfile(csv_path)
+    with open(csv_path, mode='a', encoding='utf-8', newline='') as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow(["Sentence", "Reason"])
+        writer.writerow([sentence, reason])
+
 
 def tracking_log(input, level):
     with open(f'{FOLDER_PATH}tracking.txt', 'a', encoding='utf8') as f:

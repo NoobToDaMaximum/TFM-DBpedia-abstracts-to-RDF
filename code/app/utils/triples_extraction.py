@@ -3,7 +3,7 @@ Functions to extract triples from a set of sentences
 Author: Fernando Casabán Blasco and Pablo Hernández Carrascosa
 """
 from spacy.matcher import DependencyMatcher, Matcher
-from utils.log_generator import tracking_log
+from utils.log_generator import tracking_log, log_failed_extraction
 from spacy.tokens import Span
 
 class Triple:
@@ -47,7 +47,7 @@ def get_simple_triples(nlp, sentence):
     """
     doc = nlp(sentence)
 
-    ## PREDICATE
+    ## PREDICATES
     patt_ROOT = [{"DEP": "ROOT"}]
     patt_ROOT_xcomp = [{"DEP": "ROOT", "POS": "VERB"}, {"DEP": "aux"}, {"DEP": "xcomp"}]
 
@@ -56,171 +56,121 @@ def get_simple_triples(nlp, sentence):
     matcher.add("patt_ROOT_xcomp", [patt_ROOT_xcomp])
 
     matches = matcher(doc)
-    # Get only the last match (the longest one) and select the token representing the action
-    preds = []
-    if matches:
-        (match_id, start, end) = matches[-1]
+    predicate_spans = []
+    predicate_indices = []
+
+    if not matches:
+        log_failed_extraction(sentence, "No predicate (ROOT/xcomp) found")
+        return []
+
+    for match_id, start, end in matches:
         string_id = nlp.vocab.strings[match_id]
         if string_id == "patt_ROOT":
             span = doc[start:end]
-        if string_id == "patt_ROOT_xcomp":
+            predicate_spans.append(span)
+            predicate_indices.append(span[0].i)
+        elif string_id == "patt_ROOT_xcomp":
             span = doc[start + 2:end]
-        preds.append(span[0])
-        pos_of_verb = span[0].i
-    else:
-        return
+            predicate_spans.append(span)
+            predicate_indices.append(span[0].i)
 
-    ## SUBJECT
-    patt_SUBJS = [{"DEP": {"IN": ["nsubj", "nsubjpass"]}}]
-    matcher = Matcher(nlp.vocab)
-    matcher.add("patt_SUBJS", [patt_SUBJS])
+    ## SUBJECTS
+    subj_matcher = Matcher(nlp.vocab)
+    subj_matcher.add("patt_SUBJS", [[{"DEP": {"IN": ["nsubj", "nsubjpass"]}}]])
+    subj_matches = subj_matcher(doc)
+    all_subjs = []
 
-    subjs = []
-    matches = matcher(doc)
-    for match_id, start, end in matches:
-        span_subj = doc[start:end][0]  # The matched span
-        subjs.append(get_sentence_subtree_from_token(span_subj, ["cc", "conj"], inner=False))
-        rest_of_span = doc[end:pos_of_verb]
-        conjs = [t for t in rest_of_span if t.dep_ == "conj"]
+    for match_id, start, end in subj_matches:
+        subj_token = doc[start:end][0]
+        subj = get_sentence_subtree_from_token(subj_token, ["cc", "conj"], inner=False)
+        all_subjs.append(subj)
+        conjs = [t for t in doc[end:doc[-1].i] if t.dep_ == "conj"]
         for c in conjs:
-            s = get_sentence_subtree_from_token(doc[c.i], ["cc", "conj"], inner=False)
-            subjs.append(s)
+            all_subjs.append(get_sentence_subtree_from_token(c, ["cc", "conj"], inner=False))
 
-    ## OBJECT
-    patt_attr = [{"RIGHT_ID": "verb", "RIGHT_ATTRS": {"LEMMA": "be"}},
-                 {"LEFT_ID": "verb", "REL_OP": ">", "RIGHT_ID": "attr", "RIGHT_ATTRS": {"DEP": "attr"}}]
-    patt_advmod_obj = [{"RIGHT_ID": "verb", "RIGHT_ATTRS": {"DEP": {"IN": ["ROOT", "xcomp"]}}},
-                       {"LEFT_ID": "verb", "REL_OP": ">", "RIGHT_ID": "advmod",
-                        "RIGHT_ATTRS": {"DEP": {"IN": ["advmod", "dobj"]}}}]
-    patt_prep_obj = [{"RIGHT_ID": "verb", "RIGHT_ATTRS": {"DEP": {"IN": ["ROOT", "xcomp"]}}},
-                     {"LEFT_ID": "verb", "REL_OP": ">", "RIGHT_ID": "prep", "RIGHT_ATTRS": {"DEP": "prep"}},
-                     {"LEFT_ID": "prep", "REL_OP": ">", "RIGHT_ID": "obj", "RIGHT_ATTRS": {"DEP": "pobj"}}]
-    patt_be_acomp = [{"RIGHT_ID": "verb", "RIGHT_ATTRS": {"LEMMA": "be"}},
-                     {"LEFT_ID": "verb", "REL_OP": ">", "RIGHT_ID": "acomp", "RIGHT_ATTRS": {"DEP": "acomp"}}]
-    patt_agent_obj = [{"RIGHT_ID": "verb", "RIGHT_ATTRS": {"DEP": "ROOT"}},
-                      {"LEFT_ID": "verb", "REL_OP": ">", "RIGHT_ID": "agent", "RIGHT_ATTRS": {"DEP": "agent"}},
-                      {"LEFT_ID": "agent", "REL_OP": ">", "RIGHT_ID": "obj", "RIGHT_ATTRS": {"DEP": "pobj"}}]
-    patt_verb_conj = [{"RIGHT_ID": "verb", "RIGHT_ATTRS": {"DEP": "ROOT"}},
-                      {"LEFT_ID": "verb", "REL_OP": ">", "RIGHT_ID": "conj", "RIGHT_ATTRS": {"DEP": "conj"}}]
-
+    ## OBJECTS via DependencyMatcher
     dep_matcher = DependencyMatcher(nlp.vocab)
-    dep_matcher.add("patt_attr", [patt_attr])
-    dep_matcher.add("patt_advmod_obj", [patt_advmod_obj])
-    dep_matcher.add("patt_prep_obj", [patt_prep_obj])
-    dep_matcher.add("patt_be_acomp", [patt_be_acomp])
-    dep_matcher.add("patt_agent_obj", [patt_agent_obj])
-    dep_matcher.add("patt_verb_conj", [patt_verb_conj])
+    dep_matcher.add("patt_attr", [[{"RIGHT_ID": "verb", "RIGHT_ATTRS": {"LEMMA": "be"}},
+                                    {"LEFT_ID": "verb", "REL_OP": ">", "RIGHT_ID": "attr", "RIGHT_ATTRS": {"DEP": "attr"}}]])
+    dep_matcher.add("patt_advmod_obj", [[{"RIGHT_ID": "verb", "RIGHT_ATTRS": {"DEP": {"IN": ["ROOT", "xcomp"]}}},
+                                          {"LEFT_ID": "verb", "REL_OP": ">", "RIGHT_ID": "advmod", "RIGHT_ATTRS": {"DEP": {"IN": ["advmod", "dobj"]}}}]])
+    dep_matcher.add("patt_prep_obj", [[{"RIGHT_ID": "verb", "RIGHT_ATTRS": {"DEP": {"IN": ["ROOT", "xcomp"]}}},
+                                       {"LEFT_ID": "verb", "REL_OP": ">", "RIGHT_ID": "prep", "RIGHT_ATTRS": {"DEP": "prep"}},
+                                       {"LEFT_ID": "prep", "REL_OP": ">", "RIGHT_ID": "obj", "RIGHT_ATTRS": {"DEP": "pobj"}}]])
+    dep_matcher.add("patt_be_acomp", [[{"RIGHT_ID": "verb", "RIGHT_ATTRS": {"LEMMA": "be"}},
+                                       {"LEFT_ID": "verb", "REL_OP": ">", "RIGHT_ID": "acomp", "RIGHT_ATTRS": {"DEP": "acomp"}}]])
+    dep_matcher.add("patt_agent_obj", [[{"RIGHT_ID": "verb", "RIGHT_ATTRS": {"DEP": "ROOT"}},
+                                        {"LEFT_ID": "verb", "REL_OP": ">", "RIGHT_ID": "agent", "RIGHT_ATTRS": {"DEP": "agent"}},
+                                        {"LEFT_ID": "agent", "REL_OP": ">", "RIGHT_ID": "obj", "RIGHT_ATTRS": {"DEP": "pobj"}}]])
 
-    #### THIS IS THE REAL CODE ####
     dep_matches = dep_matcher(doc)
 
-    objs = []
-    if not dep_matches:
-        return []
-    for match_id, token_id in dep_matches:
-        string_id = nlp.vocab.strings[match_id]  # Get string representation
-        if not check_ascending_order_token_id(token_id):  # verify tokens matched are at right side from verb
-            continue
-
-        if string_id in ["patt_attr", "patt_advmod_obj"]:
-            conjs = doc[token_id[1]].conjuncts  # coordinated tokens, not including the token itself
-            if conjs:
-                objs.append(get_sentence_subtree_from_token(doc[token_id[1]], ["cc", "conj"], inner=False))
-                for c in conjs:
-                    objs.append(get_sentence_subtree_from_token(doc[c.i], ["cc", "conj"], inner=False))
-            else:
-                objs.append(get_sentence_subtree_from_token(doc[token_id[1]], inner=False))
-
-        if string_id == "patt_be_acomp":
-            conjs = doc[token_id[1]].conjuncts  # coordinated tokens, not including the token itself
-            if conjs:
-                objs.append(get_sentence_subtree_from_token(doc[token_id[1]], ["cc", "conj"], inner=False))
-                for c in conjs:
-                    objs.append(get_sentence_subtree_from_token(doc[c.i], ["cc", "conj"], inner=False))
-            else:
-                objs.append(get_sentence_subtree_from_token(doc[token_id[1]], inner=False))
-
-        if string_id == "patt_prep_obj":
-            conjs = doc[token_id[1]].conjuncts  # coordinated tokens with preposition (not including token itself)
-            if conjs:
-                # several prep + objects
-                prep_object = get_sentence_subtree_from_token(doc[token_id[1]], ["cc", "conj"], inner=False)  # get first (prep + object)
-                simpler_objs = split_conjunctions_obj(prep_object, doc[token_id[1]], doc[token_id[2]])  # coordinated tokens with the object
-                objs.extend(simpler_objs)
-                for c in conjs:
-                    prep_object = get_sentence_subtree_from_token(doc[c.i], ["cc", "conj"], inner=False)  # get next (prep + object)
-                    if prep_object[0].pos_ == "ADP":
-                        inside_object = [tk for tk in prep_object if (tk.dep_.find("obj") != -1)]
-                        if inside_object:
-                            simpler_objs = split_conjunctions_obj(prep_object, doc[c.i],inside_object[-1])  # coordinated tokens with the object
-                            objs.extend(simpler_objs)
-                    else:
-                        objs.append(prep_object)
-            else:
-                prep_object = get_sentence_subtree_from_token(doc[token_id[1]], inner=False)  # there is only one object
-                simpler_objs = split_conjunctions_obj(prep_object, doc[token_id[1]], doc[token_id[2]])  # coordinated tokens within the object
-                objs.extend(simpler_objs)
-
-        if string_id == "patt_agent_obj":
-            conjs = doc[token_id[1]].conjuncts  # coordinated tokens with agent (not including token itself)
-            if conjs:
-                # several agent + object
-                agent_object = get_sentence_subtree_from_token(doc[token_id[1]], ["cc", "conj"], inner=False)  # get first (agent + object)
-                simpler_objs = split_conjunctions_obj(agent_object, doc[token_id[1]],
-                                                      doc[token_id[2]])  # coordinated tokens with the object
-                objs.extend(simpler_objs)
-                for c in conjs:
-                    agent_object = get_sentence_subtree_from_token(doc[c.i], ["cc", "conj"], inner=False)  # get next (agent + object)
-                    inside_object = [tk for tk in agent_object if (tk.dep_.find("obj") != -1)]
-                    simpler_objs = split_conjunctions_obj(agent_object, doc[c.i], inside_object[-1])  # coordinated tokens with the object
-                    objs.extend(simpler_objs)
-            else:
-                agent_object = get_sentence_subtree_from_token(doc[token_id[1]], inner=False)  # there is only one object
-                simpler_objs = split_conjunctions_obj(agent_object, doc[token_id[1]], doc[token_id[2]])  # coordinated tokens within the object
-                objs.extend(simpler_objs)
-
-        if string_id == "patt_verb_conj":
-            if doc[token_id[1]].pos_ == "VERB":
-                continue
-            conjs = doc[token_id[0]].conjuncts  # coordinated tokens, not including the token itself
-            for c in conjs:
-                objs.append(get_sentence_subtree_from_token(doc[c.i], ["cc", "conj"], inner=False))
-
-    # Build triples
     triples = []
-    for s in subjs:
-        for o in objs:
-            if not o:
+    for pred_span, pred_index in zip(predicate_spans, predicate_indices):
+        pred_token = pred_span[0]
+        valid_subjs = all_subjs
+
+        objs = []
+        for match_id, token_ids in dep_matches:
+            if not check_ascending_order_token_id(token_ids):
                 continue
-            if o[0].pos_ == "ADP":
-                if o[0].text == "by":
-                    o = o[1:]  # remove token "by"
-                    if isinstance(o, list):
-                        temp = []
-                        [temp.extend([tk for tk in token]) if isinstance(token, Span) else temp.append(token) for token in o]
-                        o = temp
-                    subject_token_list = [token for token in o]  # swap subject and object
-                    object_token_list = [token for token in s]
-                    new_triple = Triple(subject_token_list, preds, object_token_list, sentence)  # change pred_prep by preds
-                    triples.append(new_triple)
+            verb_token = doc[token_ids[0]]
+            if verb_token.lemma_ != pred_token.lemma_ and abs(verb_token.i - pred_token.i) > 2:
+                continue
+
+            string_id = nlp.vocab.strings[match_id]
+            if string_id in ["patt_attr", "patt_advmod_obj", "patt_be_acomp"]:
+                obj_token = doc[token_ids[1]]
+                conjs = obj_token.conjuncts
+                objs.append(get_sentence_subtree_from_token(obj_token, ["cc", "conj"], inner=False))
+                for c in conjs:
+                    objs.append(get_sentence_subtree_from_token(c, ["cc", "conj"], inner=False))
+
+            elif string_id == "patt_prep_obj":
+                prep = doc[token_ids[1]]
+                pobj = doc[token_ids[2]]
+                prep_object = get_sentence_subtree_from_token(prep, ["cc", "conj"], inner=False)
+                simpler_objs = split_conjunctions_obj(prep_object, prep, pobj)
+                objs.extend(simpler_objs)
+
+            elif string_id == "patt_agent_obj":
+                agent = doc[token_ids[1]]
+                pobj = doc[token_ids[2]]
+                agent_object = get_sentence_subtree_from_token(agent, ["cc", "conj"], inner=False)
+                simpler_objs = split_conjunctions_obj(agent_object, agent, pobj)
+                objs.extend(simpler_objs)
+
+        for s in valid_subjs:
+            for o in objs:
+                if not o:
                     continue
+                if o[0].pos_ == "ADP" and o[0].text == "by":
+                    o = o[1:]
+                    subject_token_list = list(o)
+                    object_token_list = list(s)
+                    triple = Triple(subject_token_list, [pred_token], object_token_list, sentence)
+                else:
+                    pred_prep = [pred_token, o[0]] if o[0].pos_ == "ADP" else [pred_token]
+                    o = o[1:] if o[0].pos_ == "ADP" else o
+                    subject_token_list = list(s)
+                    object_token_list = [tk for span in o for tk in (span if isinstance(span, Span) else [span])]
+                    triple = Triple(subject_token_list, pred_prep, object_token_list, sentence)
 
-                pred_prep = [preds[0], o[0]]
-                o = o[1:]
-            else:
-                pred_prep = preds
+                triples.append(triple)
 
-            if isinstance(o, list):  # o may include Tokens and Spans in a same list
-                temp = []
-                [temp.extend([tk for tk in token]) if isinstance(token, Span) else temp.append(token) for token in o]
-                o = temp
+    # Fallback extraction if no triples matched
+    if not triples:
+        subj = next((t for t in doc if t.dep_ in ["nsubj", "nsubjpass"]), None)
+        pred = next((t for t in doc if t.dep_ == "ROOT"), None)
+        obj = next((t for t in doc if t.dep_ in ["attr", "dobj", "pobj", "oprd"]), None)
 
-            subject_token_list = [token for token in s]
-            object_token_list = [token for token in o]
+        if subj and pred and obj:
+            subj_span = get_sentence_subtree_from_token(subj, ["cc", "conj"], inner=False)
+            obj_span = get_sentence_subtree_from_token(obj, ["cc", "conj"], inner=False)
+            triples.append(Triple(list(subj_span), [pred], list(obj_span), sentence))
 
-            new_triple = Triple(subject_token_list, pred_prep, object_token_list, sentence)
-            triples.append(new_triple)
     return triples
+
 
 
 def simplify_sentence(nlp, sentence):
@@ -471,6 +421,8 @@ def get_all_triples(nlp, sentences):
             [simple_sentences_tracking.append(simple) for simple in sent_simple_list]  # tracking
             for s in sent_simple_list:
                 tps = get_simple_triples(nlp, s)
+                if not tps:
+                    log_failed_extraction(s, "No triples extracted")
                 triples.extend(tps)
     tracking_log(simple_sentences_tracking, level=3)  # tracking
     return triples, len(simple_sentences_tracking)
