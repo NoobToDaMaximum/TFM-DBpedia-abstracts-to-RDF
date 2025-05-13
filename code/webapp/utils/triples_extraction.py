@@ -3,7 +3,7 @@ Functions to extract triples from a set of sentences
 Author: Fernando Casabán Blasco and Pablo Hernández Carrascosa
 """
 from spacy.matcher import DependencyMatcher, Matcher
-from utils.log_generator import tracking_log
+from utils.log_generator import tracking_log, log_failed_extraction
 from spacy.tokens import Span
 
 class Triple:
@@ -68,7 +68,8 @@ def get_simple_triples(nlp, sentence):
         preds.append(span[0])
         pos_of_verb = span[0].i
     else:
-        return
+        log_failed_extraction(sentence, "No predicate (ROOT/xcomp) found")
+        return []
 
     ## SUBJECT
     patt_SUBJS = [{"DEP": {"IN": ["nsubj", "nsubjpass"]}}]
@@ -114,6 +115,7 @@ def get_simple_triples(nlp, sentence):
 
     objs = []
     if not dep_matches:
+        log_failed_extraction(sentence, "No object dependency pattern matched")
         return []
     for match_id, token_id in dep_matches:
         string_id = nlp.vocab.strings[match_id]  # Get string representation
@@ -469,6 +471,7 @@ def get_all_triples(nlp, sentences):
             [simple_sentences_tracking.append(simple) for simple in sent_simple_list]  # tracking
             for s in sent_simple_list:
                 tps = get_simple_triples(nlp, s)
+                log_failed_extraction(s, "No triples extracted")
                 triples.extend(tps)
     tracking_log(simple_sentences_tracking, level=3)  # tracking
     return triples, len(simple_sentences_tracking)
