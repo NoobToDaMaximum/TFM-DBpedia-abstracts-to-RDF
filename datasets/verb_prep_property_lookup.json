@@ -2093,12 +2093,11 @@
     "in": "UNK"
   },
   "discover": {
-    "DEF": "http://dbpedia.org/ontology/discoverer",
-    "by": "http://dbpedia.org/ontology/discoverer",
-    "in": "http://dbpedia.org/ontology/discovery",
-    "on": "UNK",
+    "DEF": "UNK",
     "among": "UNK",
-    "for": "UNK"
+    "for": "UNK",
+    "in": "UNK",
+    "on": "UNK"
   },
   "discuss": {
     "DEF": "UNK",
@@ -2985,10 +2984,6 @@
     "DEF": "UNK",
     "as": "UNK",
     "in": "UNK"
-  },
-  "is": {
-    "DEF": "UNK",
-    "as": "UNK"
   },
   "isolate": {
     "DEF": "UNK",
@@ -4664,55 +4659,26 @@
     "DEF": "UNK"
   },
   "touch": {
-    "DEF": "UNK",
-    "on": "UNK",
-    "with": "UNK",
-    "to": "UNK",
-    "in": "UNK",
-    "upon": "UNK"
+    "DEF": "UNK"
   },
   "tour": {
     "DEF": "UNK",
-    "in": [
-      "http://dbpedia.org/ontology/location",
-      "http://dbpedia.org/ontology/locationCity",
-      "http://dbpedia.org/ontology/locationCountry"
-    ],
-    "to": [
-      "http://dbpedia.org/ontology/location",
-      "http://dbpedia.org/ontology/locationCity",
-      "http://dbpedia.org/ontology/locationCountry"
-    ],
-    "through": [
-      "http://dbpedia.org/ontology/location",
-      "http://dbpedia.org/ontology/locationCity",
-      "http://dbpedia.org/ontology/locationCountry"
-    ],
-    "at": "UNK",
-    "for": "UNK",
     "with": "UNK"
   },
   "trace": {
     "DEF": "UNK",
-    "to": [
-      "http://dbpedia.org/ontology/location",
-      "http://dbpedia.org/ontology/origin"
-    ],
-    "back": "UNK",
-    "from": "UNK",
-    "through": "UNK"
+    "to": "UNK"
   },
   "trade": {
-    "DEF": "UNK",
-    "on": ["http://dbpedia.org/ontology/stockExchange", "UNK"],
+    "on": "UNK",
     "to": "UNK"
   },
   "train": {
-    "DEF": "http://dbpedia.org/ontology/training",
-    "at": "http://dbpedia.org/ontology/institution",
+    "DEF": "UNK",
+    "at": "UNK",
     "for": "UNK",
     "in": "UNK",
-    "under": "http://dbpedia.org/ontology/trainer"
+    "under": "UNK"
   },
   "transfer": {
     "DEF": "UNK",
@@ -4734,91 +4700,52 @@
   },
   "transmit": {
     "DEF": "UNK",
-    "by": "UNK",
-    "through": "UNK",
-    "to": "UNK",
-    "from": "UNK"
+    "on": "UNK"
   },
   "transport": {
-    "DEF": "UNK",
-    "to": [
-      "http://dbpedia.org/ontology/location",
-      "http://dbpedia.org/ontology/locationCity",
-      "http://dbpedia.org/ontology/locationCountry"
-    ],
-    "from": [
-      "http://dbpedia.org/ontology/location",
-      "http://dbpedia.org/ontology/locationCity",
-      "http://dbpedia.org/ontology/locationCountry"
-    ],
-    "in": "UNK",
-    "with": "UNK"
+    "DEF": "UNK"
   },
   "travel": {
     "DEF": "UNK",
     "in": "UNK",
     "on": "UNK",
     "over": "UNK",
-    "to": [
-      "http://dbpedia.org/ontology/location",
-      "http://dbpedia.org/ontology/locationCity",
-      "http://dbpedia.org/ontology/locationCountry"
-    ],
-    "from": [
-      "http://dbpedia.org/ontology/location",
-      "http://dbpedia.org/ontology/locationCity",
-      "http://dbpedia.org/ontology/locationCountry"
-    ],
+    "to": "UNK",
     "with": "UNK"
   },
   "treat": {
     "DEF": "UNK",
-    "as": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-    "in": "UNK",
-    "with": "UNK",
-    "to": "https://dbpedia.org/ontology/treatment"
+    "as": "UNK",
+    "in": "UNK"
   },
   "truncate": {
     "DEF": "UNK",
-    "to": "UNK",
-    "after": "UNK",
-    "at": "UNK"
+    "for": "UNK"
   },
   "try": {
-    "DEF": "UNK",
-    "to": "UNK",
-    "on": "UNK",
-    "for": "UNK"
+    "DEF": "UNK"
   },
   "turn": {
     "DEF": "UNK",
+    "in": "UNK",
     "into": "UNK",
-    "to": "UNK",
-    "from": "UNK",
-    "on": "UNK"
+    "to": "UNK"
   },
   "tutor": {
-    "DEF": "UNK",
-    "in": "UNK",
-    "at": "UNK",
-    "by": "UNK"
+    "DEF": "UNK"
   },
   "twine": {
     "DEF": "UNK",
-    "around": "UNK",
-    "with": "UNK",
-    "into": "UNK"
+    "around": "UNK"
   },
   "umpire": {
-    "DEF": "UNK",
-    "in": "UNK",
-    "at": "UNK"
+    "DEF": "UNK"
+  },
+  "unable": {
+    "DEF": "UNK"
   },
   "uncover": {
-    "DEF": "UNK",
-    "by": "http://dbpedia.org/ontology/discoverer",
-    "in": "UNK",
-    "about": "UNK"
+    "DEF": "UNK"
   },
   "undergo": {
     "DEF": "http://dbpedia.org/ontology/procedure"

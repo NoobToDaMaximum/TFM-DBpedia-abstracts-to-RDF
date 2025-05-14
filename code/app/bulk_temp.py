@@ -118,8 +118,8 @@ if __name__ == "__main__":
     print('DBpedia abstracts to RDF')
     print('This app translates any kind of text into RDF!')
 
-    from_index = 1
-    to_index = 10001
+    from_index = 9
+    to_index = 10
     df = pd.read_csv('datasets/long-abstracts-sample.csv')
     df = df.to_dict(orient='records')
     df = df[from_index:to_index]

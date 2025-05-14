@@ -424,5 +424,27 @@ def get_all_triples(nlp, sentences):
                 if not tps:
                     log_failed_extraction(s, "No triples extracted")
                 triples.extend(tps)
+
+    additional_triples = []
+    for t in triples:
+        if len(t.objct) > 1:
+            adj_tokens = [tok for tok in t.objct if tok.pos_ == "ADJ"]
+            noun_tokens = [tok for tok in t.objct if tok.pos_ == "NOUN"]
+            if adj_tokens and noun_tokens:
+                is_from_tokens = list(nlp("is from"))
+                nationality_triple = Triple(t.subj, is_from_tokens, adj_tokens, t.sent)
+                additional_triples.append(nationality_triple)
+
+    triples.extend(additional_triples)
+
+    unique_triples = []
+    seen = set()
+    for t in triples:
+        key = repr(t).lower()
+        if key not in seen:
+            seen.add(key)
+            unique_triples.append(t)
+
     tracking_log(simple_sentences_tracking, level=3)  # tracking
-    return triples, len(simple_sentences_tracking)
+    return unique_triples, len(simple_sentences_tracking)
+

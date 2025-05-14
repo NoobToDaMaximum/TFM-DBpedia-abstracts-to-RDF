@@ -12,7 +12,7 @@ DEFAULT_VERB = "DEF"
 
 import csv
 from pathlib import Path
-missing_log_path = Path("code/app/output/missing_predicate_mappings.csv")
+missing_log_path = Path("code/output/missing_predicate_mappings.csv")
 ###############
 # Text to RDF #
 ###############
@@ -262,8 +262,5 @@ def build_save_result_graph(triples, fpath):
     g = Graph()
     for triple in triples:
         g.add((triple.subj_rdf, triple.pred_rdf, triple.objct_rdf))
-    try:
-        g.serialize(fpath, format='ttl')
-    except:
-        print(f"Error while saving the graph in{fpath}")
-    return g
+    result = g.serialize(format='ttl')
+    return g, result
