@@ -74,7 +74,7 @@ def pipeline(nlp, raw_text, dbo_graph, prop_lex_table, cla_lex_table):
     except Exception as e:
         print(f"[ERROR] Spotlight or RDF processing failed: {e}")
 
-    return triples, rdf_triples, n_sent_spacy, n_sent_simples
+    return triples, rdf_triples, n_sent_spacy, len(n_sent_simples), [s.text for s in sentences], n_sent_simples
 
 
 def print_debug(triples):
@@ -127,10 +127,13 @@ if __name__ == "__main__":
     for elem in tqdm.tqdm(df):
         raw_text = elem['abstract'].replace('\n', '')
         try:
-            text_triples, rdf_triples, nsent_spacy, nsent_simples = pipeline(nlp, raw_text, dbo_graph, prop_lex_table, cla_lex_table)
+            text_triples, rdf_triples, nsent_spacy, nsent_simples, spacy_sents, simplified_sents = pipeline(nlp, raw_text, dbo_graph, prop_lex_table, cla_lex_table)
 
+            elem['spacy_sentences'] = spacy_sents
             elem['nsent_spacy'] = nsent_spacy
+            elem['simplified_sentences'] = simplified_sents
             elem['nsent_simples'] = nsent_simples
+            
 
             if text_triples:
                 elem['relations'] = [t.__repr__() for t in text_triples]
