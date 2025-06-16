@@ -35,6 +35,83 @@ class Triple:
 # Triples extraction functions #
 ################################
 
+def extract_hearst_list_patterns(nlp, doc, sentence):
+    """
+    Extract triples from patterns like:
+    - 'animals such as cats and dogs'
+    - 'countries including France and Germany'
+    - 'writers especially Orwell and Hemingway'
+    - 'cars like Tesla and Ford'
+    Returns: list of Triple objects
+    """
+    triples = []
+    matcher = Matcher(nlp.vocab)
+
+    hearst_patterns = {
+        "HEARST_SUCH_AS": [
+            {"POS": "NOUN"},
+            {"LOWER": "such"},
+            {"LOWER": "as"},
+            {"POS": {"IN": ["PROPN", "NOUN"]}, "OP": "+"}
+        ],
+        "HEARST_INCLUDING": [
+            {"POS": "NOUN"},
+            {"LOWER": "including"},
+            {"POS": {"IN": ["PROPN", "NOUN"]}, "OP": "+"}
+        ],
+        "HEARST_ESPECIALLY": [
+            {"POS": "NOUN"},
+            {"LOWER": "especially"},
+            {"POS": {"IN": ["PROPN", "NOUN"]}, "OP": "+"}
+        ],
+        "HEARST_LIKE": [
+            {"POS": "NOUN"},
+            {"LOWER": "like"},
+            {"POS": {"IN": ["PROPN", "NOUN"]}, "OP": "+"}
+        ]
+    }
+
+    for name, pattern in hearst_patterns.items():
+        matcher.add(name, [pattern])
+
+    matches = matcher(doc)
+
+    for match_id, start, end in matches:
+        span = doc[start:end]
+        string_id = nlp.vocab.strings[match_id]
+
+        tokens = span[:]
+        if len(tokens) < 4:
+            continue
+
+        # Hypernym is the first noun (e.g., "countries")
+        hypernym = tokens[0]
+
+        # Hyponyms are the list items after the trigger
+        trigger_index = [i for i, t in enumerate(tokens) if t.text.lower() in ["such", "including", "especially", "like"]]
+        if not trigger_index:
+            continue
+        hyponym_tokens = tokens[trigger_index[0] + 2:]  # Skip the trigger word(s)
+
+        # Split by commas or "and"/"or"
+        current_item = []
+        hyponyms = []
+        for tok in hyponym_tokens:
+            if tok.text.lower() in ["and", "or", ","]:
+                if current_item:
+                    hyponyms.append(current_item)
+                    current_item = []
+            else:
+                current_item.append(tok)
+        if current_item:
+            hyponyms.append(current_item)
+
+        for hyponym in hyponyms:
+            triple = Triple(hyponym, [nlp("is a")[0]], [hypernym], sentence)
+            triples.append(triple)
+
+    return triples
+
 
 def get_simple_triples(nlp, sentence):
     """
@@ -46,6 +123,12 @@ def get_simple_triples(nlp, sentence):
     This function only works with simple sentences.
     """
     doc = nlp(sentence)
+    triples = []
+    # --------------------------------------
+    # HEARST PATTERN: "X is a/an Y"
+    # --------------------------------------
+    hearst_list_triples = extract_hearst_list_patterns(nlp, doc, sentence)
+    triples.extend(hearst_list_triples)
 
     ## PREDICATES
     patt_ROOT = [{"DEP": "ROOT"}]
