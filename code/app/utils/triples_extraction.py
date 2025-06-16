@@ -185,6 +185,8 @@ def get_simple_triples(nlp, sentence):
     dep_matcher.add("patt_agent_obj", [[{"RIGHT_ID": "verb", "RIGHT_ATTRS": {"DEP": "ROOT"}},
                                         {"LEFT_ID": "verb", "REL_OP": ">", "RIGHT_ID": "agent", "RIGHT_ATTRS": {"DEP": "agent"}},
                                         {"LEFT_ID": "agent", "REL_OP": ">", "RIGHT_ID": "obj", "RIGHT_ATTRS": {"DEP": "pobj"}}]])
+    dep_matcher.add("patt_verb_conj", [[{"RIGHT_ID": "verb", "RIGHT_ATTRS": {"DEP": "ROOT"}},
+                      {"LEFT_ID": "verb", "REL_OP": ">", "RIGHT_ID": "conj", "RIGHT_ATTRS": {"DEP": "conj"}}]])
 
     dep_matches = dep_matcher(doc)
 
@@ -222,6 +224,13 @@ def get_simple_triples(nlp, sentence):
                 agent_object = get_sentence_subtree_from_token(agent, ["cc", "conj"], inner=False)
                 simpler_objs = split_conjunctions_obj(agent_object, agent, pobj)
                 objs.extend(simpler_objs)
+
+            elif string_id == "patt_verb_conj":
+                if doc[token_ids[1]].pos_ == "VERB":
+                    continue
+                conjs = doc[token_ids[0]].conjuncts  # coordinated tokens, not including the token itself
+                for c in conjs:
+                    objs.append(get_sentence_subtree_from_token(doc[c.i], ["cc", "conj"], inner=False))
 
         for s in valid_subjs:
             for o in objs:
@@ -509,8 +518,6 @@ def get_all_triples(nlp, sentences):
                 triples.extend(tps)
 
     additional_triples = []
-
-    #### LOOK AT THIS LATER ####
     for t in triples:
         if len(t.objct) > 1:
             adj_tokens = [tok for tok in t.objct if tok.pos_ == "ADJ"]
@@ -521,6 +528,7 @@ def get_all_triples(nlp, sentences):
                 additional_triples.append(nationality_triple)
 
     triples.extend(additional_triples)
+    triples = unify_subjects(triples)
 
     unique_triples = []
     seen = set()
@@ -531,5 +539,25 @@ def get_all_triples(nlp, sentences):
             unique_triples.append(t)
 
     tracking_log(simple_sentences_tracking, level=3)  # tracking
-    return unique_triples, len(simple_sentences_tracking)
+    return unique_triples, len(simple_sentences_tracking), simple_sentences_tracking
 
+def is_generic_subject(text):
+    return text.lower() in ["he", "she", "they", "him", "her", "them", "his", "her", "their",
+                            "the man", "the woman", "the person", "the individual", "the group",]
+
+def unify_subjects(triples):
+    last_named_subject = None
+    unified = []
+
+    for t in triples:
+        subj_text = ' '.join([tok.text for tok in t.subj])
+
+        if not is_generic_subject(subj_text) and subj_text.istitle():
+            last_named_subject = t.subj  # Only update if it's a proper name
+
+        elif is_generic_subject(subj_text) and last_named_subject:
+            t.subj = last_named_subject  # Replace with last known name
+
+        unified.append(t)
+
+    return unified
