@@ -35,19 +35,25 @@ class Triple:
 # Triples extraction functions #
 ################################
 
-def extract_hearst_list_patterns(nlp, doc, sentence):
+def extract_hearst_patterns(nlp, doc, sentence):
     """
-    Extract triples from patterns like:
-    - 'animals such as cats and dogs'
-    - 'countries including France and Germany'
-    - 'writers especially Orwell and Hemingway'
-    - 'cars like Tesla and Ford'
+    Extract triples using Hearst-style patterns:
+    - Identity: "X is a/an Y", "She was an artist"
+    - List: "X such as Y and Z", "X including Y"
     Returns: list of Triple objects
     """
     triples = []
     matcher = Matcher(nlp.vocab)
 
     hearst_patterns = {
+        # Identity pattern: X is a/an Y
+        "HEARST_ISA": [
+            {"DEP": {"IN": ["nsubj", "nsubjpass"]}},
+            {"LEMMA": "be"},
+            {"POS": "DET", "OP": "?"},
+            {"POS": "ADJ", "OP": "*"},
+            {"POS": "NOUN"}
+        ],
         "HEARST_SUCH_AS": [
             {"POS": "NOUN"},
             {"LOWER": "such"},
@@ -80,37 +86,50 @@ def extract_hearst_list_patterns(nlp, doc, sentence):
         span = doc[start:end]
         string_id = nlp.vocab.strings[match_id]
 
-        tokens = span[:]
-        if len(tokens) < 4:
-            continue
+        if string_id == "HEARST_ISA":
+            subj_token = span[0]
+            pred_token = span[1]
+            obj_tokens = span[3:] if span[2].pos_ == "DET" else span[2:]
 
-        # Hypernym is the first noun (e.g., "countries")
-        hypernym = tokens[0]
+            adj_tokens = [tok for tok in obj_tokens if tok.pos_ == "ADJ"]
+            noun_tokens = [tok for tok in obj_tokens if tok.pos_ == "NOUN"]
 
-        # Hyponyms are the list items after the trigger
-        trigger_index = [i for i, t in enumerate(tokens) if t.text.lower() in ["such", "including", "especially", "like"]]
-        if not trigger_index:
-            continue
-        hyponym_tokens = tokens[trigger_index[0] + 2:]  # Skip the trigger word(s)
+            subj_span = get_sentence_subtree_from_token(subj_token, ["cc", "conj"], inner=False)
+            triples.append(Triple(list(subj_span), [pred_token], list(obj_tokens), sentence))
 
-        # Split by commas or "and"/"or"
-        current_item = []
-        hyponyms = []
-        for tok in hyponym_tokens:
-            if tok.text.lower() in ["and", "or", ","]:
-                if current_item:
-                    hyponyms.append(current_item)
-                    current_item = []
-            else:
-                current_item.append(tok)
-        if current_item:
-            hyponyms.append(current_item)
+            if adj_tokens:
+                triples.append(Triple(list(subj_span), list(nlp("is from")), adj_tokens, sentence))
+            if noun_tokens:
+                triples.append(Triple(list(subj_span), [nlp("is")[0]], noun_tokens, sentence))
 
-        for hyponym in hyponyms:
-            triple = Triple(hyponym, [nlp("is a")[0]], [hypernym], sentence)
-            triples.append(triple)
+        else:
+            tokens = span[:]
+            if len(tokens) < 4:
+                continue
+            hypernym = tokens[0]
+
+            trigger_index = [i for i, t in enumerate(tokens) if t.text.lower() in ["such", "including", "especially", "like"]]
+            if not trigger_index:
+                continue
+            hyponym_tokens = tokens[trigger_index[0] + 2:]
+
+            current_item = []
+            hyponyms = []
+            for tok in hyponym_tokens:
+                if tok.text.lower() in ["and", "or", ","]:
+                    if current_item:
+                        hyponyms.append(current_item)
+                        current_item = []
+                else:
+                    current_item.append(tok)
+            if current_item:
+                hyponyms.append(current_item)
+
+            for hyponym in hyponyms:
+                triples.append(Triple(hyponym, [nlp("is a")[0]], [hypernym], sentence))
 
     return triples
+
 
 
 def get_simple_triples(nlp, sentence):
