@@ -35,7 +35,7 @@ class Triple:
 # Triples extraction functions #
 ################################
 
-def extract_hearst_patterns(nlp, doc, sentence):
+def extract_hearst_list_patterns(nlp, doc, sentence):
     """
     Extract triples using Hearst-style patterns:
     - Identity: "X is a/an Y", "She was an artist"
