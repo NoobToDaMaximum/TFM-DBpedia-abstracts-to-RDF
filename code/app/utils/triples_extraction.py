@@ -426,6 +426,8 @@ def get_all_triples(nlp, sentences):
                 triples.extend(tps)
 
     additional_triples = []
+
+    #### LOOK AT THIS LATER ####
     for t in triples:
         if len(t.objct) > 1:
             adj_tokens = [tok for tok in t.objct if tok.pos_ == "ADJ"]
